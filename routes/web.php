@@ -25,9 +25,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['guest', 'verified'])->name('dashboard');
+Route::get('/events', function () {
+    return Inertia::render('Admin/Events');
+})->name('dashboard');
 
 Route::get('/events', function () {
     return Inertia::render('Admin/Events');

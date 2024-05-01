@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 // import '../css/app.css';
 import '../css/responsive.css';
 import '../css/style.css';
+import '../css/vendor/fontawesome-free/css/all.min.css'
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
