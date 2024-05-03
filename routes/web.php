@@ -29,9 +29,9 @@ Route::get('/events', function () {
     return Inertia::render('Admin/Events');
 })->name('dashboard');
 
-Route::get('/events', function () {
-    return Inertia::render('Admin/Events');
-});
+// Route::get('/events', function () {
+//     return Inertia::render('Admin/Events');
+// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
