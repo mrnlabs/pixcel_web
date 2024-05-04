@@ -14,6 +14,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <Header/>
+
     	<div class="wrapper">
             <!-- hero banner here -->
             <main>
