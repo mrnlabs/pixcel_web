@@ -7,6 +7,7 @@ import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
 import Header from '@/Components/Header.vue';
+import SideNavbar from '@/Components/SideNavbar.vue';
 import Footer from '@/Components/Footer.vue';
 
 const showingNavigationDropdown = ref(false);
@@ -14,7 +15,8 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <Header/>
-    	<div class="wrapper">
+    <SideNavbar/>
+    	<div class="">
             <!-- hero banner here -->
             <main>
                 <slot />

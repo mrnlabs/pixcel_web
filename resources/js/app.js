@@ -1,11 +1,15 @@
 import './bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import '../css/vertical-responsive-menu.min.css'
 //import bootsrap js
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 // import '../css/app.css';
 import '../css/responsive.css';
 import '../css/style.css';
 import '../css/vendor/fontawesome-free/css/all.min.css'
+import '../custom_js/custom.js';
+import '../custom_js/vertical-responsive-menu.min.js'
+import $ from 'jquery';
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -21,6 +25,7 @@ createInertiaApp({
         return createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use($)
             .mount(el);
     },
     progress: {

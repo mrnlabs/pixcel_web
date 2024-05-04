@@ -114,7 +114,7 @@ const submit = () => {
 				class="main-btn btn-hover w-100 mt-4"
 				:isDisabled="form.processing"
 				:hasIcon=true
-				 icon="fas fa-trash ms-2"
+				 icon="fas fa-sign-in-alt ms-2"
 				/>
                 <!-- <button class="main-btn btn-hover w-100 mt-4" type="submit">Sign In 
 					<i class="fas fa-sign-in-alt ms-2"></i>
