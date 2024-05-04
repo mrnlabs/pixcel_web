@@ -163,11 +163,11 @@
 	display: none;
 }
 
-/* @media (min-width:992px) {	
+@media (min-width:992px) {	
 .vertical_nav{
 	left: 0;
-} */
-	
+}
+}
 .toggle_menu {
 	display: none;
 }
