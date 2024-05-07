@@ -11,7 +11,7 @@ class CreatePlanRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class CreatePlanRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string',
+            'amount' => 'required|string',
+            'description' => 'required|string'
         ];
     }
 }

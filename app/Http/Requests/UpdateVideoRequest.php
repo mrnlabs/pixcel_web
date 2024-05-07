@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdatePlanRequest extends FormRequest
+class UpdateVideoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,11 +21,12 @@ class UpdatePlanRequest extends FormRequest
      */
     public function rules(): array
     {
-             return [
-                 'id'=> 'required|exists:plan,id',
-                 'name' => 'required|string',
-                 'amount' => 'required|string',
-                 'description' => 'required|string'
-             ];
+
+            return [
+                'id' => 'required|exists:videos:id',
+                'event_id' => 'required|exists:event,id',
+                'name' => 'required|string',
+                'path' => 'required|string',
+            ];
     }
 }
