@@ -11,7 +11,7 @@ class CreateSharingSettingsRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,19 @@ class CreateSharingSettingsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'thanks_message' => 'required|string',
+            'props' => 'required|string',
+            'sharing_method' => 'required|string',
+            'edit_active' => 'required|boolean',
+            'in_app_active' => 'required|boolean',
+            'gallery' => 'required|boolean',
+            'email_subject' => 'required|string',
+            'text_email' => 'required|string',
+            'text_message' => 'required|string',
+            'webgallery_email_subject' => 'required|string',
+            'webgallery_email_message' => 'required|string',
+            'social_share_description' => 'required|string',
         ];
     }
+
 }

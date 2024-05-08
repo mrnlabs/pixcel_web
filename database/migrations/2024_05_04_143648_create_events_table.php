@@ -20,6 +20,7 @@ return new class extends Migration
             $table->dateTime('countdown');
             $table->string('beep_sounds');
             $table->string('face_props');
+            $table->string('qrcode')->nullable();
             $table->string('gallery_name');
             $table->string('attract_screen');
             $table->string('app_logo');
