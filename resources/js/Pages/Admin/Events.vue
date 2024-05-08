@@ -15,7 +15,7 @@ import { Head } from "@inertiajs/vue3";
 				<div class="row">
 					<div class="col-md-12">
 						<div class="d-main-title">
-							<h3><i class="fa-solid fa-chart-pie me-3"></i>Reports</h3>
+							<h3><i class="fa-solid fa-chart-pie me-3"></i>Events</h3>
 						</div>
 					</div>
 					<div class="col-md-12">
@@ -40,7 +40,7 @@ import { Head } from "@inertiajs/vue3";
 										<a href="#" class="pe-4 w-100 ps-4 text-center co-main-btn h_40 d-inline-block"><i class="fa-solid fa-arrow-rotate-right me-3"></i>Refresh</a>
 									</div>
 								</div>
-								<div class="main-form mt-4">
+								<!-- <div class="main-form mt-4">
 									<div class="row g-3">
 										<div class="col-lg-3 col-md-6">
 											<div class="form-group">
@@ -83,7 +83,7 @@ import { Head } from "@inertiajs/vue3";
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="event-list">
@@ -278,3 +278,5 @@ import { Head } from "@inertiajs/vue3";
 	<!-- Body End -->
 	</AuthenticatedLayout>
 </template>
+
+

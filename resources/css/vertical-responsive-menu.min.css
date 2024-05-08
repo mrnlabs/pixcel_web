@@ -71,7 +71,7 @@
 
 .menu--link:hover {
 	background: #e8f7f7;
-	color: #6ac045 !important;
+	color: red!important;
 }
 
 .menu--link.active {
@@ -150,7 +150,7 @@
 }
 
 .sub_menu--link:hover {
-	color: #6ac045 !important;
+	color: red!important;
 	background: #e8f7f7;
 }
 

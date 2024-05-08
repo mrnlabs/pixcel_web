@@ -1,54 +1,5 @@
 @charset "utf-8";
 
-/* ------------------------------------------------------------------
- * Name         : Barren - Simple Online Event Ticketing System Html Template
- * File         : style.css
- * Author       : Gambolthemes
- * Author URI   : gambol943@gmail.com
- * All Rights Reserved.
- * --------------------------------------------------------------------- */
-
-/*===================== TABLE OF CONTENT =======================
-
-1.  Default css
-	- Google Fonts
-	- Reset Css
-	- Night Mode Btn
-	- Scrollbar
-	- Left Sidebar
-	- Header section
-	- Footer section
-	- Main Index Page
-	- Breadcrumb Title
-2.  Index Homepage
-3.	Explore Events
-4.	Sign In and Sign Up Pages
-5.	Event Detail View Page
-6.	Checkout Page
-7.	Profile Page
-8.	Organisation Dashboard Page
-9.	Create Events
-10.	Pricing Page
-11.	FAQ Page
-12.	Contact Us Page
-13.	Our Blog Page
-14.	Blog Detail Page
-15.	Help Center Page
-16.	About Us Page
-17.	Sell Tickets Online Page
-18.	Create Page
-19.	Coming Soon Page
-20.	Error 404 Page
-21.	Refer a Friend Page
-22.	Terms & Condition Page
-23.	Privacy Policy Page
-24.	Booking Confirmed Page
-25.	Invoice Page
-
-
-/* ================================================================================== 
- Google Fonts
-===================================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap')
 
 /* ================================================================================== 
@@ -377,7 +328,7 @@ body {
 }
 
 .navbar-toggler-icon:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .create-btn i {
@@ -390,8 +341,8 @@ body {
     color: #fff;
 	height: 40px;
     display: inline-block;
-    border: 2px solid #6ac045;
-	background-color: #6ac045;
+    border: 2px solid red;
+	background-color: red;
     padding: 8px 18px;
     border-radius: 3px;
     text-transform: capitalize;
@@ -430,7 +381,7 @@ body {
 }
 
 .account-link.show img {
-	border: 2px solid #6ac045;
+	border: 2px solid red;
 }
 
 .dropdown-menu-account li {
@@ -462,7 +413,7 @@ body {
     height: 60px;
     background-color: #fff;
     border-radius: 100%;
-    border: 2px solid #6ac045;
+    border: 2px solid red;
     padding: 2px;
     object-fit: cover;
 }
@@ -493,7 +444,7 @@ body {
 }
 
 .dropdown-menu-account li .link-item:hover {
-	color: #6ac045 !important;
+	color: red !important;
 	background-color: #e8f7f7;
 }
 
@@ -502,11 +453,11 @@ body {
 }
 
 .nav-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .barren-head .nav-item .nav-link.active, .barren-head .nav-item .show>.nav-link {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .close-btn {
@@ -534,8 +485,8 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: #fff;
-    background-color: #6ac045;
-    border: 2px solid #6ac045;
+    background-color: red;
+    border: 2px solid red;
     display: block;
     height: 50px;
     padding: 12px;
@@ -548,8 +499,8 @@ body {
 
 .offcanvas-create-btn:hover {
     color: #fff !important;
-	background: #7ad254;
-	border: 2px solid #7ad254;
+	background: red;
+	border: 2px solid red;
 }
 
 .offcanvas-footer {
@@ -580,17 +531,17 @@ body {
     width: 40px;
     height: 40px;
     display: block;
-    border: 2px solid #6ac045;
+    border: 2px solid red;
     border-radius: 100%;
     text-align: center;
     line-height: 38px;
-    color: #6ac045;
+    color: red;
 }
 
 .offcanvas-social > .social-links li > .social-link:hover {
     color: #fff !important;
-	border: 2px solid #6ac045;
-	background-color: #6ac045;
+	border: 2px solid red;
+	background-color: red;
 }
 
 .dropdown-submenu {
@@ -611,12 +562,12 @@ body {
 }
 
 .dropdown-submenu .dropdown-item:hover {
-	color: #6ac045 !important;
+	color: red !important;
 	background-color: #e8f7f7;
 }
 
 .dropdown-submenu .dropdown-item:focus {
-	color: #6ac045 !important;
+	color: red !important;
 	background-color: transparent;
 }
 
@@ -774,19 +725,19 @@ body {
     color: #fff;
     font-weight: 400;
 	text-align: center;
-    background: #6ac045;
+    background: red;
     height: 50px;
     display: inline-block;
     line-height: 49px;
     padding: 0 30px;
     border-radius: 3px;
-	border: 1px solid #6ac045;
+	border: 1px solid red;
 }
 
 .btn-hover:hover {
 	color: #fff !important;
-	background: #7ad254;
-	border: 1px solid #7ad254;
+	background: red;
+	border: 1px solid red;
 }
 
 .co-main-btn {
@@ -833,7 +784,7 @@ body {
 }
 
 .title-view-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .main-title h3 {
@@ -874,7 +825,7 @@ body {
 
 .mixitup-control-active {
     background: #fff;
-	color: #6ac045 !important;
+	color: red !important;
 }
 
 .controls {
@@ -923,8 +874,8 @@ body {
 
 .mixitup-control-active[data-filter]:after {
     background: transparent;
-	border-bottom: 3px solid #6ac045;
-	color: #6ac045;
+	border-bottom: 3px solid red;
+	color: red;
 }
 
 .main-card {
@@ -1068,7 +1019,7 @@ body {
     right: 20px;
     top: 20px;
     cursor: pointer;
-    background-color: #6ac045;
+    background-color: red;
     display: block;
     height: 45px;
     width: 45px;
@@ -1105,7 +1056,7 @@ body {
 }
 
 .bookmark-icon:hover, .like-icon.bookmarked {
-	background-color:#6ac045;
+	background-color:red;
 	color:#fff;
 }
 
@@ -1154,7 +1105,7 @@ body {
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: #6ac045 !important;
+    background: red !important;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -1196,15 +1147,15 @@ body {
 .owl-nav .owl-prev:hover {
 	color: #fff !important;
 	opacity: 1;
-	background: #6ac045 !important;
-	border: 1px solid #6ac045 !important;
+	background: red !important;
+	border: 1px solid red !important;
 }	
 
 .owl-nav .owl-next:hover {
 	color: #fff !important;
 	opacity: 1;
-	border: 1px solid #6ac045 !important;
-	background: #6ac045 !important;
+	border: 1px solid red !important;
+	background: red !important;
 }
 
 .engaging-slider .owl-nav .owl-prev {
@@ -1270,7 +1221,7 @@ body {
 
 .step-tabs .step-link.active, .step-tabs .show>.step-link {
     color: #fff;
-    background-color: #6ac045;
+    background-color: red;
 }
 
 .step-tabs .step-link:hover {
@@ -1291,7 +1242,7 @@ body {
 
 .step-tabs .step-link.active:hover {
     color: #fff;
-    background-color: #6ac045;
+    background-color: red;
 }
 
 .step-text {
@@ -1377,7 +1328,7 @@ body {
 }
 
 .our-organisations-block {
-    background-color: #6ac045;
+    background-color: red;
 }
 
 .our-organisations-block .main-title h3 {
@@ -1519,13 +1470,13 @@ body {
 .bootstrap-select .dropdown-item.active, .bootstrap-select .dropdown-item:active {
     color: #fff !important;
 	border-radius: 0 !important;
-    background-color: #6ac045 !important;
+    background-color: red !important;
 }
 
 .bootstrap-select.dropdown-item.active, .bootstrap-select .dropdown-item:active {
     color: #fff !important;
     text-decoration: none;
-    background-color: #6ac045 !important;
+    background-color: red !important;
 }
 
 .bootstrap-select .dropdown-item {
@@ -1567,7 +1518,7 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     min-height: 100vh;
-    background: #6ac045 url(../images/sign_bg.jpg);
+    background: red url(../images/sign_bg.jpg);
     width: 500px;
     padding: 50px;
 }
@@ -1620,22 +1571,22 @@ body {
 
 .sidebar-register-link {
     margin-left: 5px;
-    color: #6ac045;
+    color: red;
     font-weight: 500;
 }
 
 .sidebar-register-link:hover {
-	color: #7ad254 !important;
+	color: red !important;
 }
 
 .signup-link {
     margin-left: 5px;
-    color: #6ac045;
+    color: red;
     font-weight: 500;
 }
 
 .signup-link:hover {
-	color: #7ad254 !important;
+	color: red !important;
 }
 
 .registration-title {
@@ -1661,7 +1612,7 @@ body {
 }
 
 .pass-show-eye:hover {
-    color: #6ac045;
+    color: red;
 }
 
 .field-password {
@@ -1672,12 +1623,12 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-	color: #6ac045;
+	color: red;
     font-weight: 500;
 }
 
 .forgot-pass-link:hover {
-	color: #7ad254 !important;
+	color: red !important;
 }
 
 .divider {
@@ -1816,11 +1767,11 @@ body {
 }
 
 .agree-text a {
-    color: #6ac045;
+    color: red;
 }
 
 .agree-text a:hover {
-    color: #7ad254 !important;
+    color: red !important;
 	text-decoration: underline !important;
 }
 
@@ -1839,7 +1790,7 @@ body {
 }
 
 .barren-breadcrumb .breadcrumb .breadcrumb-item a:hover {
-	color: #6ac045 !important;
+	color: red !important;
 }
 
 .barren-breadcrumb .breadcrumb .breadcrumb-item.active {
@@ -1880,7 +1831,7 @@ body {
 
 .event-month {
     display: block;
-    background: #6ac045;
+    background: red;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     font-size: 18px;
@@ -2001,7 +1952,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
-    background-color: #6ac045;
+    background-color: red;
     margin-right: 5px;
     border-radius: 3px;
     box-shadow: 0 1px 3px rgb(0 0 0 / 6%), 0 1px 3px rgb(0 0 0 / 5%);
@@ -2031,7 +1982,7 @@ body {
 
 .event-dt-right-icon i {
     font-size: 16px;
-    color: #6ac045;
+    color: red;
     text-align: center;
     width: 40px;
     height: 40px;
@@ -2056,14 +2007,14 @@ body {
 }
 	
 .event-dt-right-content a {
-    color: #6ac045;
+    color: red;
     font-weight: 500;
 	margin-top: 13px;
     display: inline-block;
 }
 
 .event-dt-right-content a:hover {
-    color: #7ad254 !important;
+    color: red !important;
 }
 
 .booking-btn {
@@ -2091,7 +2042,7 @@ body {
 }
 
 .dropdown-item:hover {
-	color: #6ac045 !important;
+	color: red !important;
 	background-color: #e8f7f7 !important;
 }
 
@@ -2135,7 +2086,7 @@ body {
 }
 
 .view-all-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 /* --- Checkout Page --- */
@@ -2278,7 +2229,7 @@ body {
     color: #fff;
     font-weight: 500;
     text-align: center;
-    background: #6ac045;
+    background: red;
     display: inline-block;
     border-radius: 3px;
     border: 0;
@@ -2364,8 +2315,8 @@ body {
 
 .counter span:hover {
     color: #fff;
-    background: #6ac045;
-    border: 2px solid #6ac045;
+    background: red;
+    border: 2px solid red;
 }
 
 .select-tickets-block p {
@@ -2466,7 +2417,7 @@ body {
 }
 
 .upload-cover .cover-img-btn [type="file"] + label:hover {
-	background: #7ad254;
+	background: red;
 	color: #fff;
 }
 
@@ -2479,7 +2430,7 @@ body {
     height: 130px;
     background-color: #fff;
     border-radius: 100%;
-    border: 2px solid #6ac045;
+    border: 2px solid red;
     padding: 2px;
     object-fit: cover;
 }
@@ -2523,7 +2474,7 @@ body {
 }
 
 .avatar-img-btn [type="file"] + label:hover {
-	background: #7ad254;
+	background: red;
 	color: #fff;
 }
 
@@ -2549,7 +2500,7 @@ body {
 }
 
 .ff-block a:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .ff-block a span {
@@ -2565,7 +2516,7 @@ body {
 .verify-badge {
     margin-left: 8px;
     font-size: 15px;
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .user-description {
@@ -2598,10 +2549,10 @@ body {
 	font-size: 18px;
     width: 40px;
     height: 40px;
-    border: 2px solid #6ac045;
+    border: 2px solid red;
     border-radius: 100%;
     text-align: center;
-    color: #6ac045;
+    color: red;
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
@@ -2616,8 +2567,8 @@ body {
 
 .social-links > .social-link:hover {
     color: #fff !important;
-	border: 2px solid #6ac045;
-	background-color: #6ac045;
+	border: 2px solid red;
+	background-color: red;
 }
 
 .user-right-dt {
@@ -2648,11 +2599,11 @@ body {
 .garren-line-tab .nav-link.active, 
 .garren-line-tab .nav-link.active:hover {
     color: #fff !important;
-	background-color: #6ac045 !important;
+	background-color: red !important;
 }
 
 .garren-line-tab .nav-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .garren-line-tab .nav-link i {
@@ -2681,13 +2632,13 @@ body {
 }
 
 .custom-tabs .tab-link.active, .tab-tabs .show>.tab-link {
-    color: #6ac045;
+    color: red;
     background-color: #fff;
-	border-bottom: 3px solid #6ac045;
+	border-bottom: 3px solid red;
 }
 
 .custom-tabs .tab-link:hover {
-	color: #6ac045;
+	color: red;
     background-color: #fff;
 	border-bottom: 3px solid transparent;
 }
@@ -2697,9 +2648,9 @@ body {
 }
 
 .custom-tabs .tab-link.active:hover {
-    color: #6ac045;
+    color: red;
     background-color: #fff;
-	border-bottom: 3px solid #6ac045;
+	border-bottom: 3px solid red;
 }
 
 .setting-step {
@@ -2834,7 +2785,7 @@ body {
 
 .card-icon i {
     font-size: 16px;
-    color: #6ac045;
+    color: red;
     text-align: center;
     width: 40px;
     height: 40px;
@@ -2859,13 +2810,13 @@ body {
 }
 
 .card-dt-text a {
-    color: #6ac045;
+    color: red;
     font-weight: 500;
     font-size: 14px;
 }
 
 .card-dt-text a:hover {
-    color: #7ad254 !important;
+    color: red !important;
 }
 
 .edit-btn {
@@ -2920,7 +2871,7 @@ body {
 }
 
 .close-model-btn:hover {
-    color: #6ac045;
+    color: red;
     opacity: 1;
 }
 
@@ -2996,14 +2947,14 @@ body {
 }
 
 .my-event-tabs .event-link.active, .my-event-tabs .show>.event-link {
-    color: #6ac045;
+    color: red;
     background-color: #fff;
-    border-bottom: 3px solid #6ac045;
+    border-bottom: 3px solid red;
 }
 
 
 .my-event-tabs .event-link.active span, .my-event-tabs .show>.event-link span {
-    color: #6ac045;
+    color: red;
 }
 
 .event-link span {
@@ -3015,9 +2966,9 @@ body {
 }
 
 .my-event-tabs .event-link.active:hover {
-    color: #6ac045;
+    color: red;
     background-color: #fff;
-    border-bottom: 3px solid #6ac045;
+    border-bottom: 3px solid red;
 }
 
 .event-count {
@@ -3031,7 +2982,7 @@ body {
 
 .my-event-tabs .event-link.active .event-count, .my-event-tabs .show>.event-link .event-count {
     color: #fff;
-	background: #6ac045;
+	background: red;
 }
 
 .profile-event-content {
@@ -3088,14 +3039,14 @@ body {
 
 .saved-btn {
 	color: #fff !important;
-    border: 1px solid #6ac045 !important;
-    background: #6ac045 !important;
+    border: 1px solid red !important;
+    background: red !important;
 }
 
 .saved-btn:hover {
 	color: #fff !important;
-    border: 1px solid #6ac045 !important;
-    background: #7ad254 !important;
+    border: 1px solid red !important;
+    background: red !important;
 }
 
 .ff-tablist {
@@ -3104,8 +3055,8 @@ body {
 }
 
 .ff-tablist .nav-item .nav-link.active, .ff-tablist .nav-item .show>.nav-link {
-    color: #6ac045 !important;
-    border-color: #6ac045;
+    color: red !important;
+    border-color: red;
     background-color: transparent;
 }
 
@@ -3343,7 +3294,7 @@ body {
 }
 
 .dashboard-date-arrows a:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .before_date.disabled, .after_date.disabled {
@@ -3410,7 +3361,7 @@ body {
 }
 
 .dashboard-report-card.success {
-    background-color: #6ac045;
+    background-color: red;
     border-color: #78c350;
 }
 
@@ -3469,19 +3420,19 @@ body {
 
 .rs .btn-check:active+.btn-outline-primary, .rs .btn-check:checked+.btn-outline-primary, .rs .btn-outline-primary.active, .rs .btn-outline-primary.dropdown-toggle.show, .rs .btn-outline-primary:active {
     color: #fff;
-    background-color: #6ac045;
-    border-color: #6ac045;
+    background-color: red;
+    border-color: red;
 }
 
 .rs .btn-outline-primary {
-    color: #6ac045;
-    border-color: #6ac045;
+    color: red;
+    border-color: red;
 }
 
 .rs .btn-outline-primary:hover {
-    color: #6ac045;
+    color: red;
     background-color: #e8f7f7;
-    border-color: #6ac045;
+    border-color: red;
 }
 
 .rs .btn-outline-primary:focus {
@@ -3530,8 +3481,8 @@ body {
 
 .custom2-tabs .tab-link.active, .tab-tabs .show>.tab-link {
     color: #fff;
-    background-color: #6ac045;
-	border: 1px solid #6ac045;
+    background-color: red;
+	border: 1px solid red;
 }
 
 .custom2-tabs .tab-link:hover {
@@ -3546,8 +3497,8 @@ body {
 
 .custom2-tabs .tab-link.active:hover {
     color: #fff;
-    background-color: #6ac045;
-	border: 1px solid #6ac045;
+    background-color: red;
+	border: 1px solid red;
 }
 
 .event-top .card-event-img {
@@ -3565,8 +3516,8 @@ body {
 }
 
 .option-btn:hover {
-    color: #6ac045;
-    border: 1px solid #6ac045;
+    color: red;
+    border: 1px solid red;
     background: rgba(255,255,255,.3);
 }
 
@@ -3650,8 +3601,8 @@ body {
 }
 
 .option-btn-1:hover {
-    color: #6ac045;
-    border: 1px solid #6ac045;
+    color: red;
+    border: 1px solid red;
     background: rgba(255,255,255,.3);
 }
 
@@ -3721,7 +3672,7 @@ body {
 }
 
 .contact-list .bottom .icon-box .progress .progress-bar {
-    background: #6ac045;
+    background: red;
     border-radius: 2px;
 }
 
@@ -3750,7 +3701,7 @@ body {
 }
 
 .datepicker--day-name {
-    color: #6ac045 !important;
+    color: red !important;
 	font-weight: 500 !important;
 	font-family: 'Roboto', sans-serif;
 }
@@ -3807,8 +3758,8 @@ body {
 }
 
 .action-link:hover {
-	color: #6ac045 !important;
-    border: 1px solid #6ac045;
+	color: red !important;
+    border: 1px solid red;
     background: rgba(255,255,255,.3);
 }
 
@@ -3920,12 +3871,12 @@ body {
 }
 
 .a-link {
-    color: #6ac045 !important;
+    color: red !important;
     font-weight: 500;
 }
 
 .a-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
     text-decoration: underline !important;
 }
 
@@ -4042,7 +3993,7 @@ body {
 }
 
 .tracking-tab .nav-tabs .nav-link.active {
-    background-color: #6ac045;
+    background-color: red;
 	color: #fff !important;
 }
 
@@ -4084,7 +4035,7 @@ body {
 }
 
 .profile-edit-btn .btn:hover {
-	color: #6ac045 !important;
+	color: red !important;
 }
 
 .profile-edit-btn .btn:focus {
@@ -4244,13 +4195,13 @@ body {
 }
 
 #option-1:checked:checked ~ .option-1, #option-2:checked:checked ~ .option-2 {
-    border: 2px solid #6ac045;
+    border: 2px solid red;
     background: #fff;
 }
 
 #option-1:checked:checked ~ .option-1 .dot,
 #option-2:checked:checked ~ .option-2 .dot {
-	background: #6ac045;
+	background: red;
 }
 
 #option-1:checked:checked ~ .option-1 .dot::before,
@@ -4291,7 +4242,7 @@ body {
 }
 
 .action-btn:hover {
-	color: #6ac045;
+	color: red;
 }
 
 .disabled {
@@ -4326,7 +4277,7 @@ body {
 }
 
 .role-item i {
-    color: #6ac045;
+    color: red;
     width: 26px;
     height: 26px;
     line-height: 26px;
@@ -4428,7 +4379,7 @@ body {
 
 #add-event-tab .step-steps > li.active > a > .number,
 #add-event-tab .step-steps > li.done > a > .number {
-	background-color: #6ac045;
+	background-color: red;
 }
 
 #add-event-tab .step-steps > li.active > a > .number:before,
@@ -4442,7 +4393,7 @@ body {
 }
 
 #add-event-tab .step-steps > li.done:before {
-	background-color: #6ac045;
+	background-color: red;
 }
 
 #add-event-tab .step-steps > li.done > a > .number:after {
@@ -4499,12 +4450,12 @@ body {
 
 .datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
     color: #fff;
-    background: #7ad254 !important;
+    background: red !important;
 }
 
 .datepicker--cell.-current- {
    color: #fff !important;
-   background: #6ac045 !important;
+   background: red !important;
 }
 
 .absolute-icon {
@@ -4523,7 +4474,7 @@ body {
 }
 
 .absolute-icon:hover {
-    color: #6ac045;
+    color: red;
 }
 
 .default-event-thumb {
@@ -4613,7 +4564,7 @@ body {
 }
 
 .default-event-thumb-btn .thumb-change-btn [type="file"] + label:hover {
-	background: #7ad254;
+	background: red;
 	color: #fff;
 }
 
@@ -4679,7 +4630,7 @@ body {
     font-weight: 500 !important;
     font-family: 'Roboto', sans-serif !important;
     color: #fff !important;
-    background: #6ac045 !important;
+    background: red !important;
     padding: 0px 30px !important;
 	width: 150px;
     border-radius: 3px !important;
@@ -4690,7 +4641,7 @@ body {
 
 .steps_btn:hover {
 	color: #fff !important;
-	background: #7ad254 !important;
+	background: red !important;
 }
 
 .steps_btn:focus {
@@ -4769,8 +4720,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .form-check-input:checked {
-    background-color: #6ac045 !important;
-    border-color: #6ac045 !important;
+    background-color: red !important;
+    border-color: red !important;
 	outline: #a2ff7a !important;
 	box-shadow: none !important;
 }
@@ -4809,7 +4760,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .tag {
     background-color: rgba(106,192,69,0.07);
-    color: #6ac045;
+    color: red;
     display: inline-block;
     padding: 0;
     border-radius: 3px;
@@ -4963,7 +4914,7 @@ input[type=number]::-webkit-inner-spin-button {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    background: #6ac045;
+    background: red;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -5022,7 +4973,7 @@ input[type=number]::-webkit-inner-spin-button {
     height: 40px;
     line-height: 42px;
     text-align: center;
-    background: #6ac045;
+    background: red;
     border-radius: 3px;
     border: 0;
     font-size: 18px;
@@ -5058,7 +5009,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .text-icon {
     margin-bottom: 0 !important;
-    border-left: 3px solid #6ac045;
+    border-left: 3px solid red;
     padding-left: 10px;
 }
 
@@ -5067,7 +5018,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .sell-calculate-banner-bg {
-    background: #6ac045;
+    background: red;
     max-width: 300px;
     display: inline-block;
     width: 100%;
@@ -5140,12 +5091,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .switch-field input:checked+label {
-    background-color: #6ac045;
+    background-color: red;
     -webkit-box-shadow: none;
     box-shadow: none;
     color: #fff;
     text-transform: capitalize;
-    border: 1px solid #6ac045;
+    border: 1px solid red;
 }
 
 .switch-field label {
@@ -5296,19 +5247,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .faq-widget-links li a:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .cant-ans-box a {
     font-size: 16px;
     margin-top: 1.5rem;
     display: block;
-    color: #6ac045;
+    color: red;
     font-weight: 500;
 }
 
 .cant-ans-box a:hover {
-    color: #7ad254 !important;
+    color: red !important;
 }
 
 .faq-accordion-title h4 {
@@ -5636,7 +5587,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .social-share {
-    border-left: 3px solid #6ac045;
+    border-left: 3px solid red;
     padding-left: 20px;
     margin: 45px 0 25px;
 }
@@ -5654,11 +5605,11 @@ input[type=number]::-webkit-inner-spin-button {
 
 .share-link {
     font-size: 24px;
-    color: #6ac045;
+    color: red;
 }
 
 .share-link:hover {
-    color: #7ad254 !important;
+    color: red !important;
 }
 
 /* --- Help Center Page --- */
@@ -5666,7 +5617,7 @@ input[type=number]::-webkit-inner-spin-button {
 .help-center-logo {
     font-size: 14px;
     padding: 10px 10px 0;
-    color: #6ac045;
+    color: red;
 }
 
 .help-item {
@@ -5713,7 +5664,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .help-item-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .help-item-link:last-child {
@@ -5742,7 +5693,7 @@ input[type=number]::-webkit-inner-spin-button {
     vertical-align: middle;
     margin: 0 0 17px;
     color: #fff;
-    background-color: #6ac045;
+    background-color: red;
     border: 0;
     font-size: 14px;
     font-weight: 500;
@@ -5754,7 +5705,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .upload-btn [type="file"] + label:hover {
 	color: #fff !important;
-	background: #7ad254;
+	background: red;
 }
 
 .upload-file-dt span{
@@ -5796,7 +5747,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .help-faq-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .help-faq-link:before {
@@ -5825,13 +5776,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .helpful-btn {
-    color: #6ac045;
+    color: red;
     margin: 0 5px;
 	font-size: 16px;
 }
 
 .helpful-btn:hover {
-    color: #7ad254 !important;
+    color: red !important;
 }
 
 .helpful-btn span {
@@ -5846,7 +5797,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .help-pagination-link:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .kb-card {
@@ -5935,18 +5886,18 @@ input[type=number]::-webkit-inner-spin-button {
     width: 40px;
     height: 40px;
     display: inline-block;
-    border: 2px solid #6ac045;
+    border: 2px solid red;
     border-radius: 100%;
     text-align: center;
     line-height: 39px;
-    color: #6ac045;
+    color: red;
 	margin-right: 7px;
 }
 
 
 .user-social-link:hover {
-    border: 2px solid #6ac045;
-    background-color: #6ac045;
+    border: 2px solid red;
+    background-color: red;
     color: #fff !important;
 	margin-right: 7px;
 }
@@ -6038,7 +5989,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .bg-dark .step-tabs .step-link.active:hover {
     color: #fff;
-    background-color: #6ac045;
+    background-color: red;
 }
 
 /* --- Create Page --- */
@@ -6121,8 +6072,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .coming-soon-content #timer div {
-    border: 2px dashed #6ac045;
-    color: #6ac045;
+    border: 2px dashed red;
+    color: red;
     width: 100px;
     height: 105px;
     border-radius: 5px;
@@ -6227,15 +6178,15 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .terms-tabs .term-link.active, .terms-tabs .show>.term-link {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .terms-tabs .term-link:hover {
-    color: #7ad254 !important;
+    color: red !important;
 }
 
 .terms-tabs .term-link.active:hover {
-    color: #6ac045 !important;
+    color: red !important;
 }
 
 .terms-main-title h4 {
@@ -6369,7 +6320,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .cb-icon:hover {
     color: #fff !important;
-    background: #6ac045;
+    background: red;
 }
 
 .booking-confirmed-bottom {
