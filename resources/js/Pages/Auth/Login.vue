@@ -61,7 +61,7 @@ const submit = () => {
               </div>
               </Link>
               <div class="app-top-right-link">
-                New to Barren?<a class="sidebar-register-link" href="sign_up.html">Sign up</a>
+                New to Pixcel360?<a class="sidebar-register-link" Link href="/register">Sign up</a>
               </div>
             </div>
           </div>
@@ -72,17 +72,17 @@ const submit = () => {
 
 				<div class="form-group mt-5">
 				<InputLabel label="Email*"/>
-				<TextInput 
+				<TextInput
 				type="email"
 				v-model="form.email"
 				:isRequired="true"
 				class="form-control h_50"
 				placeholder="Enter your email"
 				/>
-				<div v-if="errors.email" class="text-danger">{{ errors.email}}</div>																					 
+				<div v-if="errors.email" class="text-danger">{{ errors.email}}</div>
 				</div>
 
-                
+
 
                 <div class="form-group mt-4">
 
@@ -92,9 +92,9 @@ const submit = () => {
                     <a class="forgot-pass-link" href="forgot_password.html">Forgot Password?</a>
                   </div>
 
-				  
+
                   <div class="loc-group position-relative">
-					
+
 					<TextInput
 					v-model="form.password"
 					type="password"
@@ -102,7 +102,7 @@ const submit = () => {
 					class="form-control h_50"
 					placeholder="Enter your password"
 					/>
-                   
+
                     <span class="pass-show-eye"><i class="fas fa-eye-slash"></i></span>
 					<div v-if="errors.password" class="text-danger">{{ errors.password}}</div>
                   </div>
@@ -116,7 +116,7 @@ const submit = () => {
 				:hasIcon=true
 				 icon="fas fa-sign-in-alt ms-2"
 				/>
-                <!-- <button class="main-btn btn-hover w-100 mt-4" type="submit">Sign In 
+                <!-- <button class="main-btn btn-hover w-100 mt-4" type="submit">Sign In
 					<i class="fas fa-sign-in-alt ms-2"></i>
 				</button> -->
 
@@ -148,7 +148,7 @@ const submit = () => {
                 </button>
               </div>
               <div class="new-sign-link">
-                New to Barren?<a class="signup-link" href="sign_up.html">Sign up</a>
+                New to Pixcel360?<Link class="signup-link" href="/register">Sign up</Link>
               </div>
             </div>
           </div>
@@ -160,6 +160,6 @@ const submit = () => {
     </div>
   </div>
 </div>
-	
+
     </GuestLayout>
 </template>
