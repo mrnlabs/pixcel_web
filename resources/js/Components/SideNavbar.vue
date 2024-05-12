@@ -1,19 +1,27 @@
+<script>
+import { Link } from '@inertiajs/vue3';
+export default {
+    components: {
+        Link
+    }
+}
+</script>
 <template>
   <nav class="vertical_nav">
 		<div class="left_section menu_left" id="js-menu">
 			<div class="left_section">
 				<ul>
 					<li class="menu--item">
-						<a href="my_organisation_dashboard.html" class="menu--link" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
+						<Link href="/dashboard" class="menu--link" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-gauge menu--icon"></i>
 							<span class="menu--label">Dashboard</span>
-						</a>
+						</Link>
 					</li>
 					<li class="menu--item">
-						<a href="my_organisation_dashboard_events.html" class="menu--link" title="Events" data-bs-toggle="tooltip" data-bs-placement="right">
+						<Link href="/events" class="menu--link" title="Events" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-calendar-days menu--icon"></i>
 							<span class="menu--label">Events</span>
-						</a>
+						</Link>
 					</li>
 					<li class="menu--item">
 						<a href="my_organisation_dashboard_promotion.html" class="menu--link" title="Promotion" data-bs-toggle="tooltip" data-bs-placement="right">
@@ -58,7 +66,7 @@
 						</a>
 					</li>
 					<li class="menu--item">
-						<a href="my_organisation_dashboard_my_team.html" class="menu--link team-lock" title="My Team" data-bs-toggle="tooltip" data-bs-placement="right"> 
+						<a href="my_organisation_dashboard_my_team.html" class="menu--link team-lock" title="My Team" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-user-group menu--icon"></i>
 							<span class="menu--label">My Team</span>
 						</a>

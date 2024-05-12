@@ -18,6 +18,8 @@ class EventService
 
     public function createEvent(array $data)
     {
+//        add user id
+        $data['user_id'] = auth()->user()->id;
         Event::create($data);
         return "Event created successfully!";
     }

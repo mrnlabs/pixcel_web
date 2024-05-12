@@ -161,7 +161,7 @@ import { Link } from '@inertiajs/vue3';
 									</li>
 									<li class="profile-link">
 										<a href="my_organisation_dashboard.html" class="link-item">My Organisation</a>
-										<a href="organiser_profile_view.html" class="link-item">My Profile</a>
+										<Link href="/profile" class="link-item">My Profile</Link>
 										<a Link href="/logout" class="link-item">Sign Out</a>
 									</li>
 								</ul>

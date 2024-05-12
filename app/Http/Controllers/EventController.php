@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateEventRequest;
 use App\Services\EventService;
 use App\Services\SharingSettingsService;
 use App\Services\VideoSettingsService;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class EventController extends Controller
@@ -32,7 +33,8 @@ class EventController extends Controller
     {
         try{
            $events =  $this->eventService->getEvents();
-            return Inertia::render('Event/Index', ['events' => $events]);
+
+            return Inertia::render('Events/Events', ['events' => $events]);
         } catch (\Exception $e){
             return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
@@ -44,20 +46,20 @@ class EventController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(CreateEventRequest $createEventRequest,
-                          CreateVideoSettingsRequest $createVideoSettingsRequest,
-                          CreateSharingSettingsRequest $createSharingSettingsRequest
+    public function store(Request $request
     )
     {
+
         try{
-            $new_event = $this->eventService->createEvent($createEventRequest->validated());
-            if($new_event){
-                $createVideoSettingsRequest['event_id'] = $new_event->id;
-                $createSharingSettingsRequest['event_id'] = $new_event->id;
-                $this->videoSettingsService->createVideoSettings($createVideoSettingsRequest->validated());
-                $this->sharingSettingService->createSharingSettings($createSharingSettingsRequest->validated());
-            }
-            return redirect()->route('event.index');
+            $new_event = $this->eventService->createEvent($request->all());
+//            if($new_event){
+//                $createVideoSettingsRequest['event_id'] = $new_event->id;
+//                $createSharingSettingsRequest['event_id'] = $new_event->id;
+//                $this->videoSettingsService->createVideoSettings($createVideoSettingsRequest->validated());
+//                $this->sharingSettingService->createSharingSettings($createSharingSettingsRequest->validated());
+//            }
+           // redirect to /events route
+            return redirect()->route('events');
         } catch (\Exception $e){
             return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
