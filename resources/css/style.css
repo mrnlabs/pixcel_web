@@ -209,7 +209,7 @@ table {
 }
 
 a {
-    /* color: #5065f65 !important; */
+    /* color: #5065f6 !important; */
     text-decoration: none !important;
 }
 
@@ -436,7 +436,7 @@ body {
 }
 
 .main-logo {
-    width: 120px;
+    width: 42px;
 }
 
 .res-main-logo {
@@ -885,19 +885,19 @@ body {
     color: #fff;
     font-weight: 400;
     text-align: center;
-    background: #6ac045;
+    background: #045cc7;
     height: 50px;
     display: inline-block;
     line-height: 49px;
     padding: 0 30px;
     border-radius: 3px;
-    border: 1px solid #6ac045;
+    border: 1px solid #045cc7;
 }
 
 .btn-hover:hover {
     color: #fff !important;
-    background: #7ad254;
-    border: 1px solid #7ad254;
+    background: #0f6ad8;
+    border: 1px solid #0f6ad8;
 }
 
 .co-main-btn {
@@ -1685,13 +1685,14 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     min-height: 100vh;
-    background: #6ac045 url(../images/sign_bg.jpg);
+    /* background: #96B6F5 url(../images/sign_bg.jpg); */
+    background: #96B6F5 url(../js/images/sign_bg.jpg);
     width: 500px;
     padding: 50px;
 }
 
 .sidebar-sign-logo {
-    width: 140px;
+    width: 42px;
 }
 
 .sidebar-sign-logo img {
@@ -1739,22 +1740,22 @@ body {
 
 .sidebar-register-link {
     margin-left: 5px;
-    color: #6ac045;
+    color: #045CC7;
     font-weight: 500;
 }
 
 .sidebar-register-link:hover {
-    color: #7ad254 !important;
+    color: #1f62b4 !important;
 }
 
 .signup-link {
     margin-left: 5px;
-    color: #6ac045;
+    color: #045CC7;
     font-weight: 500;
 }
 
 .signup-link:hover {
-    color: #7ad254 !important;
+    color: #1f62b4 !important;
 }
 
 .registration-title {
@@ -1791,12 +1792,12 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    color: #6ac045;
+    color: #045cc7;
     font-weight: 500;
 }
 
 .forgot-pass-link:hover {
-    color: #7ad254 !important;
+    color: #1f62b4 !important;
 }
 
 .divider {
