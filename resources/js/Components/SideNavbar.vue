@@ -48,10 +48,10 @@ export default {
 						</a>
 					</li>
 					<li class="menu--item">
-						<a href="my_organisation_dashboard_subscription.html" class="menu--link" title="Subscription" data-bs-toggle="tooltip" data-bs-placement="right">
+						<Link href="/subscriptions" class="menu--link" title="Subscription" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-bahai menu--icon"></i>
 							<span class="menu--label">Subscription</span>
-						</a>
+						</Link>
 					</li>
 					<li class="menu--item">
 						<a href="my_organisation_dashboard_conversion_setup.html" class="menu--link" title="Conversion Setup" data-bs-toggle="tooltip" data-bs-placement="right">

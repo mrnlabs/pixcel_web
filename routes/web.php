@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\EventController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SubscriptionController;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,15 +32,18 @@ use Inertia\Inertia;
 Route::middleware('auth')->group(function () {
 
     Route::get('/events', [EventController::class, 'index'])->name('events');
-
-    Route::get('/create-event', function () {
-        return Inertia::render('Events/CreateEvent');
-    });
-
+    Route::get('/create-event', function () {return Inertia::render('Events/CreateEvent');});
     Route::post('/create-event', [EventController::class, 'store']);
+    Route::get('/event/{id}', [EventController::class, 'show'])->name('event');
+
+    //event gallery
+    Route::get('/event-gallery/{id}', [EventController::class, 'gallery'])->name('event-gallery');
 
     //profile
-    Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+
+    //subscriptions
+    Route::get('/subscriptions', [SubscriptionController::class, 'index'])->name('subscriptions');
 });
 
 require __DIR__.'/auth.php';

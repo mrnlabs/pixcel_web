@@ -19,7 +19,7 @@ export default {
         }
     },
     methods: {
-        submit() { console.log("test this form", this.form);
+        submit() {
             this.$inertia.post('/create-event', this.form)
         }
     },

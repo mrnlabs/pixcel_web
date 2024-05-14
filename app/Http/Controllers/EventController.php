@@ -111,4 +111,15 @@ class EventController extends Controller
             return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
     }
+
+    public function gallery($id){
+        try{
+            $event =  $this->eventService->getEvent($id);
+
+            return Inertia::render('Events/Gallery', ['event' => $event]);
+
+        } catch (\Exception $e){
+            return Inertia::render('Error', ['message' => $e->getMessage()]);
+        }
+    }
 }
