@@ -1,103 +1,139 @@
-<script setup>
+<script >
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import { Head, Link, useForm } from '@inertiajs/vue3';
+import {  Link } from '@inertiajs/vue3';
+import {defineComponent} from "vue";
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 
-const form = useForm({
-    name: '',
-    email: '',
-    password: '',
-    password_confirmation: '',
+export default defineComponent({
+    data() {
+        return {
+            form: {
+                firstname : '',
+                lastname : '',
+                email: '',
+                phone: '',
+                password: '',
+                password_confirmation: '',
+            }
+        }
+    },
+    methods: {
+        submit() {
+
+            this.$inertia.post('/register', this.form)
+        }
+    },
+    components: {
+        ApplicationLogo,
+        Link,GuestLayout
+    }
 });
 
-const submit = () => {
-    form.post(route('register'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
-    });
-};
 </script>
 
 <template>
     <GuestLayout>
         <Head title="Register" />
+            <div class="form-wrapper">
+                <div class="app-form">
+                    <div class="app-form-sidebar">
+                        <div class="sidebar-sign-logo">
+                            <ApplicationLogo  />
+                        </div>
+                        <div class="sign_sidebar_text">
+                            <h1>The Easiest Way to Create Events and Sell More Tickets Online</h1>
+                        </div>
+                    </div>
+                    <div class="app-form-content">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 col-md-10">
+                                    <div class="app-top-items">
+                                        <a href="index.html">
+                                            <div class="sign-logo" id="logo">
+                                                <img src="images/logo.svg" alt="">
+                                                <img class="logo-inverse" src="images/dark-logo.svg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="app-top-right-link">
+                                            Already have an account?
+                                            <Link class="sidebar-register-link" href="/login">Sign In </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-6 col-md-7">
+                                    <div class="registration">
+                                        <form @submit.prevent="submit">
+                                            <h2 class="registration-title">Sign up to Pixcel360</h2>
+                                            <div class="row mt-3">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group mt-4">
+                                                        <label class="form-label">First Name*</label>
+                                                        <input class="form-control h_50" type="text" placeholder="" v-model="form.firstname">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group mt-4">
+                                                        <label class="form-label">Last Name*</label>
+                                                        <input class="form-control h_50" type="text" placeholder="" v-model="form.lastname">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group mt-4">
+                                                        <label class="form-label">Your Email*</label>
+                                                        <input class="form-control h_50" type="email" placeholder="" v-model="form.email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group mt-4">
+                                                        <label class="form-label">Your Phone</label>
+                                                        <input class="form-control h_50" type="tel" placeholder="" v-model="form.phone">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group mt-4">
+                                                        <div class="field-password">
+                                                            <label class="form-label">Password*</label>
+                                                        </div>
+                                                        <div class="loc-group position-relative">
+                                                            <input class="form-control h_50" type="password" placeholder="" v-model="form.password">
+                                                            <span class="pass-show-eye"><i class="fas fa-eye-slash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-        <form @submit.prevent="submit">
-            <div>
-                <InputLabel for="name" value="Name" />
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group mt-4">
+                                                        <div class="field-password">
+                                                            <label class="form-label">Confirm Password*</label>
+                                                        </div>
+                                                        <div class="loc-group position-relative">
+                                                            <input class="form-control h_50" type="password" placeholder="" v-model="form.password_confirmation">
+                                                            <span class="pass-show-eye"><i class="fas fa-eye-slash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <button class="main-btn btn-hover w-100 mt-4"  type="submit">Sign Up</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="agree-text">
+                                            By clicking "Sign up", you agree to Pixcel360 <a href="#">Terms & Conditions</a> and have read the <a href="#">Privacy Policy</a>.
+                                        </div>
 
-                <TextInput
-                    id="name"
-                    type="text"
-                    class="mt-1 block w-full"
-                    v-model="form.name"
-                    required
-                    autofocus
-                    autocomplete="name"
-                />
-
-                <InputError class="mt-2" :message="form.errors.name" />
+                                        <div class="new-sign-link">
+                                            Already have an account?<Link class="signup-link" href="/login">Sign In</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-footer">
+                            © 2024, Pixcel360. All rights reserved. Powered by MRN Labs
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="mt-4">
-                <InputLabel for="email" value="Email" />
-
-                <TextInput
-                    id="email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    v-model="form.email"
-                    required
-                    autocomplete="username"
-                />
-
-                <InputError class="mt-2" :message="form.errors.email" />
-            </div>
-
-            <div class="mt-4">
-                <InputLabel for="password" value="Password" />
-
-                <TextInput
-                    id="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="new-password"
-                />
-
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
-
-            <div class="mt-4">
-                <InputLabel for="password_confirmation" value="Confirm Password" />
-
-                <TextInput
-                    id="password_confirmation"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password_confirmation"
-                    required
-                    autocomplete="new-password"
-                />
-
-                <InputError class="mt-2" :message="form.errors.password_confirmation" />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    :href="route('login')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Already registered?
-                </Link>
-
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Register
-                </PrimaryButton>
-            </div>
-        </form>
     </GuestLayout>
 </template>

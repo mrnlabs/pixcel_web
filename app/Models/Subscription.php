@@ -11,6 +11,11 @@ class Subscription extends Model
 
     public function plan()
     {
-        return $this->belongsTo(Plan::class);
+        return $this->hasOne(Plan::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

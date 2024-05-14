@@ -8,7 +8,7 @@ import { Link } from '@inertiajs/vue3';
     <header class="header">
 		<div class="header-inner">
 			<nav class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
-				<div class="container">	
+				<div class="container">
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 						<span class="navbar-toggler-icon">
 							<i class="fa-solid fa-bars"></i>
@@ -40,7 +40,7 @@ import { Link } from '@inertiajs/vue3';
 										<span>Create Event</span>
                                     </Link>
 								</div>
-							</div>							
+							</div>
 							<ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
 								<li class="nav-item">
 									<a class="nav-link active" aria-current="page" href="index.html">Dashboard</a>
@@ -161,8 +161,8 @@ import { Link } from '@inertiajs/vue3';
 									</li>
 									<li class="profile-link">
 										<a href="my_organisation_dashboard.html" class="link-item">My Organisation</a>
-										<a href="organiser_profile_view.html" class="link-item">My Profile</a>									
-										<a href="sign_in.html" class="link-item">Sign Out</a>									
+										<Link href="/profile" class="link-item">My Profile</Link>
+										<a Link href="/logout" class="link-item">Sign Out</a>
 									</li>
 								</ul>
 							</li>

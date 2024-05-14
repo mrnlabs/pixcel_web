@@ -2,25 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\ProfileService;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 
-class ProfileController extends Controller
+class InvoiceController extends Controller
 {
-    protected ProfileService $profileService;
-
-    public function __construct(ProfileService $profileService){
-        $this->profileService = $profileService;
-    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $profile =  $this->profileService->getProfile();
-
-        return Inertia::render('Profile/Edit' , ['profile' => $profile]);
+        //
     }
 
     /**

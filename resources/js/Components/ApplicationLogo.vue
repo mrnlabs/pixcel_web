@@ -5,6 +5,6 @@
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Link } from '@inertiajs/vue3';
 
-import logo from '../images/sign_logo.svg';
+import logo from '../images/PIXEL360 LOGO.svg';
 
 </script>

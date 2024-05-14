@@ -16,19 +16,11 @@ class CreateEventRequest extends FormRequest
 
     public function rules()
     {
+
         return [
-            'user_id' => 'required|exists:users,id',
-            'name' => 'required|string',
+            'name' => 'required|string|min:3|max:255',
             'language' => 'required|string',
             'country' => 'required|string',
-            'countdown' => 'required|date',
-            'beep_sounds' => 'required|string',
-            'face_props' => 'required|string',
-            'gallery_name' => 'required|string',
-            'attract_screen' => 'required|string',
-            'app_logo' => 'required|string',
-            'app_background' => 'required|string',
-            'webgallery_background' => 'required|string',
         ];
     }
 }
