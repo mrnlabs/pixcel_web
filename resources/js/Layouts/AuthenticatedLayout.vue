@@ -7,14 +7,14 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
-    <Header/>
+    <Header />
     <!-- <SideNavbar class="side"/> -->
-    	<div class="dark">
-            <!-- hero banner here -->
-            <main class="main">
-                <slot />
-            </main>
-	    </div>
+    <div>
+        <!-- hero banner here -->
+        <main>
+            <slot />
+        </main>
+    </div>
 </template>
 
 <!-- <style>
