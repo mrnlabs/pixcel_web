@@ -919,15 +919,16 @@ body {
     color: #000;
     background: #fff !important;
     border-radius: 3px;
-    Border: 1px solid #bbb;
+    Border: 1px solid #0f6ad8;
 }
 
 .co-main-btn:hover {
     color: #000 !important;
     background: #e8f7f7 !important;
     border-radius: 3px;
-    Border: 1px solid #bbb;
+    Border: 1px solid #0f6ad8;
 }
+
 
 .co-btn-width {
     width: 270px;
@@ -2549,6 +2550,7 @@ body {
     filter: none;
     transition: all 0.12s ease-in-out 0s;
     opacity: 1;
+    background-image: co;
 }
 
 .user-dt-block {
@@ -2612,7 +2614,7 @@ body {
     height: 130px;
     background-color: #fff;
     border-radius: 100%;
-    border: 2px solid #6ac045;
+    border: 2px solid #0f6ad8;
     padding: 2px;
     object-fit: cover;
 }
@@ -2656,7 +2658,7 @@ body {
 }
 
 .avatar-img-btn [type="file"]+label:hover {
-    background: #7ad254;
+    background: #0f6ad8;
     color: #fff;
 }
 
@@ -2682,7 +2684,7 @@ body {
 }
 
 .ff-block a:hover {
-    color: #6ac045 !important;
+    color: #0f6ad8 !important;
 }
 
 .ff-block a span {
@@ -2698,7 +2700,7 @@ body {
 .verify-badge {
     margin-left: 8px;
     font-size: 15px;
-    color: #6ac045 !important;
+    color: #0f6ad8 !important;
 }
 
 .user-description {
@@ -2731,10 +2733,10 @@ body {
     font-size: 18px;
     width: 40px;
     height: 40px;
-    border: 2px solid #6ac045;
+    border: 2px solid #0f6ad8;
     border-radius: 100%;
     text-align: center;
-    color: #6ac045;
+    color: #0f6ad8;
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
@@ -2749,8 +2751,8 @@ body {
 
 .social-links>.social-link:hover {
     color: #fff !important;
-    border: 2px solid #6ac045;
-    background-color: #6ac045;
+    border: 2px solid #0f6ad8;
+    background-color: #0f6ad8;
 }
 
 .user-right-dt {
@@ -2781,11 +2783,11 @@ body {
 .garren-line-tab .nav-link.active,
 .garren-line-tab .nav-link.active:hover {
     color: #fff !important;
-    background-color: #6ac045 !important;
+    background-color: #0f6ad8 !important;
 }
 
 .garren-line-tab .nav-link:hover {
-    color: #6ac045 !important;
+    color: #0f6ad8 !important;
 }
 
 .garren-line-tab .nav-link i {
@@ -3344,6 +3346,7 @@ body {
 
     .wrapper-body {
         margin-left: 254px;
+        margin-right: 254px;
         transition: all 0.3s ease-out;
     }
 
@@ -4011,9 +4014,9 @@ body {
     border-top-right-radius: 3px;
 }
 
-.main-table .table tbody tr td a {
+/* .main-table .table tbody tr td a {
     color: #000;
-}
+} */
 
 .discount-table .table td,
 .discount-table .table th {
@@ -6753,4 +6756,15 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.btn-danger {
+    background-color: #FF6666 !important;
+    border-color: #FF6666 !important;
+}
+
+.btn-danger:hover {
+    color: #fff !important;
+    background-color: #E94A4A !important;
 }
