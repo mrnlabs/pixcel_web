@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\SubscriptionController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,10 @@ use App\Http\Controllers\ProfileController;
 
 Route::middleware('auth')->group(function () {
 
+    Route::get('/', function (){
+        return Inertia::render('Dashboard');
+    });
+
     Route::get('/events', [EventController::class, 'index'])->name('events');
     Route::get('/create-event', function () {return Inertia::render('Events/CreateEvent');});
     Route::post('/create-event', [EventController::class, 'store']);
@@ -44,6 +49,11 @@ Route::middleware('auth')->group(function () {
 
     //subscriptions
     Route::get('/subscriptions', [SubscriptionController::class, 'index'])->name('subscriptions');
+    Route::get('/view-subscription', [SubscriptionController::class, 'show']);
+
+
+    //plans
+    Route::get('/plans', [PlanController::class, 'index'])->name('plans');
 });
 
 require __DIR__.'/auth.php';

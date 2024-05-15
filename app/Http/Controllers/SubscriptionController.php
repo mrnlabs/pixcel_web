@@ -18,4 +18,12 @@ class SubscriptionController extends Controller
 
     }
 
+    public function show(){
+        try{
+          return Inertia::render('Subscriptions/Invoice');
+        }catch(\Exception $e){
+            return Inertia::render('Error', ['message' => $e->getMessage()]);
+        }
+    }
+
 }

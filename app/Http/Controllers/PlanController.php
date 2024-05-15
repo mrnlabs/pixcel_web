@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PlanController extends Controller
 {
@@ -11,7 +12,11 @@ class PlanController extends Controller
      */
     public function index()
     {
-        //
+        try{
+           return Inertia::render('Plans/Plan');
+        } catch(\Exception $e){
+            return Inertia::render('Error', ['message' => $e->getMessage()]);
+        }
     }
 
     /**
