@@ -24,7 +24,7 @@ import logo from '../images/apple-icon.png';
 						</div>
 						<div class="main-logo" id="logo">
 							<img :src="logo" alt="Main Logo">
-							<img class="logo-inverse" :src="darkLogo" alt="Dark Logo">
+							<!-- <img class="logo-inverse" :src="darkLogo" alt="Dark Logo"> -->
 						</div>
 					</a>
 					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
