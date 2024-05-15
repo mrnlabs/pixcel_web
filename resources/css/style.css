@@ -1702,13 +1702,13 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     /* background: #96B6F5 url(../images/sign_bg.jpg); */
-    background: #96B6F5 url(../js/images/sign_bg.jpg);
+    background: #045CC7 url(../js/images/sign_bg.jpg);
     width: 500px;
     padding: 50px;
 }
 
 .sidebar-sign-logo {
-    width: 42px;
+    width: 70px;
 }
 
 .sidebar-sign-logo img {
