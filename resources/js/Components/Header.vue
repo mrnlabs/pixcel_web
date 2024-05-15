@@ -184,7 +184,7 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 									<li>
 										<div class="dropdown-account-header">
 											<div class="account-holder-avatar">
-												<img src="images/profile-imgs/img-13.jpg" alt="">
+												<img :src="imageProfile" alt="">
 											</div>
 											<h5>John Doe</h5>
 											<p>johndoe@example.com</p>
