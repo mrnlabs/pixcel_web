@@ -67,88 +67,23 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 								<li class="nav-item">
 									<a class="nav-link" href="pricing.html">Pricing</a>
 								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">
-										Blog
+								<!-- /////////// -->
+								<!-- Button trigger modal -->
+								<li class="nav-item">
+									<a class="nav-link" href="pricing.html" type="button" data-bs-toggle="modal"
+										data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg"
+											width="20" height="20" fill="currentColor" class="bi bi-cart"
+											viewBox="0 0 16 16">
+											<path
+												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+
+											<!-- Scrollable modal -->
+											<div class="modal-dialog modal-dialog-scrollable">
+												...
+											</div>
+										</svg>
 									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li><a class="dropdown-item" href="our_blog.html">Our Blog</a></li>
-										<li><a class="dropdown-item" href="blog_detail_view.html">Blog Detail View</a>
-										</li>
-									</ul>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">
-										Help
-									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-										<li><a class="dropdown-item" href="help_center.html">Help Center</a></li>
-										<li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
-									</ul>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">
-										Pages
-									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li>
-											<a class="dropdown-item submenu-item" href="#">Other Pages</a>
-											<ul class="submenu dropdown-menu">
-												<li><a class="dropdown-item pe-5" href="sign_in.html">Sign In</a></li>
-												<li><a class="dropdown-item pe-5" href="sign_up.html">Sign Up</a></li>
-												<li><a class="dropdown-item pe-5" href="forgot_password.html">Forgot
-														Password</a></li>
-												<li><a class="dropdown-item pe-5" href="about_us.html">About Us</a></li>
-												<li><a class="dropdown-item pe-5" href="checkout.html">Checkout</a></li>
-												<li><a class="dropdown-item pe-5" href="checkout_premium.html">Checkout
-														Premium</a></li>
-												<li><a class="dropdown-item pe-5" href="invoice.html">Invoice</a></li>
-												<li><a class="dropdown-item pe-5" href="coming_soon.html">Coming
-														Soon</a></li>
-												<li><a class="dropdown-item pe-5" href="error_404.html">Error 404</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a class="dropdown-item submenu-item" href="#">Create Event</a>
-											<ul class="submenu dropdown-menu">
-												<li><a class="dropdown-item pe-5" href="create.html">Create</a></li>
-												<li><a class="dropdown-item pe-5" href="create_venue_event.html">Create
-														Venue Event</a></li>
-												<li><a class="dropdown-item pe-5" href="create_online_event.html">Create
-														Online Event</a></li>
-											</ul>
-										</li>
-										<li>
-											<a class="dropdown-item submenu-item" href="#">Events View</a>
-											<ul class="submenu dropdown-menu">
-												<li><a class="dropdown-item pe-5"
-														href="online_event_detail_view.html">Online Event Detail
-														View</a></li>
-												<li><a class="dropdown-item pe-5"
-														href="venue_event_detail_view.html">Venue Event Detail View</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="dropdown-item" href="booking_confirmed.html">Booking Confirmed</a>
-										</li>
-										<li><a class="dropdown-item" href="attendee_profile_view.html">Attendee Profile
-												View</a></li>
-										<li><a class="dropdown-item" href="organiser_profile_view.html">Organiser
-												Profile View</a></li>
-										<li><a class="dropdown-item" href="my_organisation_dashboard.html">Organization
-												Dashboard</a></li>
-										<li><a class="dropdown-item" href="sell_tickets_online.html">Sell Tickets
-												Online</a></li>
-										<li><a class="dropdown-item" href="refer_a_friend.html">Refer a Friend</a></li>
-										<li><a class="dropdown-item" href="term_and_conditions.html">Terms &
-												Conditions</a></li>
-										<li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
-									</ul>
+
 								</li>
 							</ul>
 						</div>
@@ -191,16 +126,10 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 										</div>
 									</li>
 									<li class="profile-link">
-										<a href="my_organisation_dashboard.html" class="link-item">My Organisation</a>
 										<Link href="/profile" class="link-item">My Profile</Link>
 										<a Link href="/logout" class="link-item">Sign Out</a>
 									</li>
 								</ul>
-							</li>
-							<li>
-								<div class="night_mode_switch__btn">
-									<div id="night-mode" class="fas fa-moon fa-sun"></div>
-								</div>
 							</li>
 						</ul>
 					</div>
@@ -209,4 +138,6 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 			<div class="overlay"></div>
 		</div>
 	</header>
+
+
 </template>

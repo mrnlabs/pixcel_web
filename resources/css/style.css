@@ -6768,3 +6768,11 @@ ol {
     color: #fff !important;
     background-color: #E94A4A !important;
 }
+
+
+/* ////////////////// */
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}

@@ -69,7 +69,7 @@ const submit = () => {
               <div class="col-xl-5 col-lg-6 col-md-7">
                 <div class="registration">
                   <form @submit.prevent="submit">
-                    <h2 class="registration-title">Sign in to Barren</h2>
+                    <h2 class="registration-title">Sign in to Pixcel360</h2>
 
                     <div class="form-group mt-5">
                       <InputLabel label="Email*" />
