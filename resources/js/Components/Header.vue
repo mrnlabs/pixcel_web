@@ -51,40 +51,25 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 								<li class="nav-item">
 									<Link class="nav-link active" aria-current="page" href="/events">Dashboard</Link>
 								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+								<li class="nav-item">
+									<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
 										aria-expanded="false">
 										Explore Events
 									</a>
-									<ul class="dropdown-menu dropdown-submenu">
+									<!-- <ul class="dropdown-menu dropdown-submenu">
 										<li><a class="dropdown-item" href="explore_events.html">Explore Events</a></li>
 										<li><a class="dropdown-item" href="venue_event_detail_view.html">Venue Event
 												Detail View</a></li>
 										<li><a class="dropdown-item" href="online_event_detail_view.html">Online Event
 												Detail View</a></li>
-									</ul>
+									</ul> -->
 								</li>
 								<li class="nav-item">
 									<Link class="nav-link" href="/">Pricing</Link>
 								</li>
 
 								<!-- Button trigger modal -->
-								<li class="nav-item">
-									<a class="nav-link" href="pricing.html" type="button" data-bs-toggle="modal"
-										data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg"
-											width="20" height="20" fill="currentColor" class="bi bi-cart"
-											viewBox="0 0 16 16">
-											<path
-												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
 
-											<!-- Scrollable modal -->
-											<div class="modal-dialog modal-dialog-scrollable">
-												...
-											</div>
-										</svg>
-									</a>
-
-								</li>
 							</ul>
 						</div>
 						<div class="offcanvas-footer">
@@ -102,6 +87,25 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 					</div>
 					<div class="right-header order-2">
 						<ul class="align-self-stretch">
+							<li class="nav-item">
+								<a class="nav-link" href="pricing.html" type="button" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+										fill="currentColor">
+										<!-- Outer circle -->
+										<circle cx="20" cy="20" r="20" fill="transparent" />
+										<!-- Cart icon -->
+										<g transform="translate(8, 10)">
+											<path
+												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+										</g>
+										<!-- Circle with number -->
+										<circle cx="30" cy="10" r="8" fill="red" />
+										<text x="30" y="14" font-size="12" font-family="Arial" font-weight="bold"
+											fill="white" text-anchor="middle">5</text>
+									</svg>
+								</a>
+							</li>
 							<li>
 								<Link href="/create-event" class="create-btn btn-hover">
 								<i class="fa-solid fa-calendar-days"></i>
