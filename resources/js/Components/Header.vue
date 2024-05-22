@@ -25,7 +25,7 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 						</div>
 						<div class="main-logo" id="logo">
 							<img :src="logo" alt="Main Logo">
-							<!-- <img class="logo-inverse" :src="darkLogo" alt="Dark Logo"> -->
+
 						</div>
 					</a>
 					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
@@ -49,7 +49,7 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 							</div>
 							<ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
 								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="index.html">Dashboard</a>
+									<Link class="nav-link active" aria-current="page" href="/events">Dashboard</Link>
 								</li>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -65,9 +65,9 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 									</ul>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pricing.html">Pricing</a>
+									<Link class="nav-link" href="/">Pricing</Link>
 								</li>
-								<!-- /////////// -->
+
 								<!-- Button trigger modal -->
 								<li class="nav-item">
 									<a class="nav-link" href="pricing.html" type="button" data-bs-toggle="modal"

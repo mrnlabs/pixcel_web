@@ -33,7 +33,7 @@ use App\Http\Controllers\ProfileController;
 Route::middleware('auth')->group(function () {
 
     Route::get('/', function (){
-        return Inertia::render('Dashboard');
+        return Inertia::render('events');
     });
 
     Route::get('/events', [EventController::class, 'index'])->name('events');

@@ -153,13 +153,458 @@ export default {
 
                                                             </div>
 
-                                                            <div class="col-lg-12 col-md-12">
-                                                                <button class="main-btn btn-hover w-100 mt-4"  type="submit">Create Event</button>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="main-card p-4 mt-4">
+                                                        <div class="d-flex align-items-center justify-content-between price-variation-head">
+                                                            <h5 class="m-0 color-black fs-16">
+                                                                Functions</h5>
+                                                        </div>
+
+                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                            <div class="form-group border_bottom">
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Boomerang</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Animated GIF</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Videos</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Slomo</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Boomerang repeats <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Boomerang speed <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Boomerang bounce duration</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">GIF number of photos  <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">GIF frame duration<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Video maximum duration</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                            <div class="table-row table-head no-bg">
+                                                                <div class="table-col fs-14 text-light3">Slomo recording time<span class="red">*</span></div>
+                                                                <div class="table-col fs-14 text-light3">Slomo Boomerang<span class="red">*</span></div>
+                                                                <div class="table-col fs-14 text-light3 text-right">Slomo speed</div>
+                                                            </div>
+                                                            <div class="table-row ticket-subtype-row">
+                                                                <div class="table-col first-col">
+                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-col first-col">
+                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-col first-col">
+                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                            <div class="table-row table-head no-bg">
+                                                                <div class="table-col fs-14 text-light3">Add audio file<span class="red">*</span></div>
+                                                                <div class="table-col fs-14 text-light3">Screen flash<span class="red">*</span></div>
+                                                            </div>
+                                                            <div class="table-row ticket-subtype-row">
+                                                                <div class="table-col first-col">
+                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                        <input class="form-control h_40" type="file" min="1" max="10" required="" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-col first-col">
+                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="main-card p-4 mt-4">
+                                                        <div class="d-flex align-items-center justify-content-between price-variation-head">
+                                                            <h5 class="m-0 color-black fs-16">
+                                                                Time Outs</h5>
+                                                        </div>
+
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Editing(iOS only)<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Sharing<span class="red">*</span></div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Thanks<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Props (iOS only)<span class="red">*</span></div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="main-card p-4 mt-4">
+                                                        <div class="d-flex align-items-center justify-content-between price-variation-head">
+                                                            <h5 class="m-0 color-black fs-16">
+                                                                Sharing</h5>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between price-variation-head">
+                                                            <h5 class="m-0 color-black fs-16">
+                                                                Sharing Methods</h5>
+                                                        </div>
+
+                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                            <div class="form-group border_bottom">
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Email</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">SMS</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Download</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Airdrop</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">QR</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">General</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Whatsapp</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">In-app gallery</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Email Subject<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Default Text (email)<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Text message (SMS)</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Webgallery email subject<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Webgallery email message<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Social Share description</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="main-card p-4 mt-4">
+                                                        <div class="d-flex align-items-center justify-content-between price-variation-head">
+                                                            <h5 class="m-0 color-black fs-16">
+                                                                Branding</h5>
+                                                        </div>
+
+                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                            <div class="form-group border_bottom">
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Gallery name</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">App Logo</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Attract screen(foreground)</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">App background</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Text and button color</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
+                                                                    <h4 class="fs-14 mb-0 me-auto">Webgallery background</h4>
+                                                                    <label class="btn-switch m-0 me-3">
+                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <span class="checkbox-slider"></span>
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Email Subject<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Default Text (email)<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Text message (SMS)</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Webgallery email subject<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3">Webgallery email message<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Social Share description</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <textarea></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                             </form>
                                         </div>
                                     </div>

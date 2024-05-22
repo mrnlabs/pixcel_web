@@ -332,43 +332,11 @@ defineProps({
                                             </h4>
                                             <span class="user-email">{{ profile.email }}</span>
                                         </div>
-                                        <div class="ff-block">
-                                            <a href="#" class="" role="button" data-bs-toggle="modal"
-                                                data-bs-target="#FFModal"><span>0</span>Followers</a>
-                                            <a href="#" class="" role="button" data-bs-toggle="modal"
-                                                data-bs-target="#FFModal"><span>2</span>Following</a>
-                                        </div>
+
                                         <div class="user-description">
                                             <p>Hey I am a John Doe</p>
                                         </div>
-                                        <div class="user-btns">
-                                            <a href="my_organisation_dashboard.html"
-                                                class="co-main-btn co-btn-width min-width d-inline-block h_40">My
-                                                Organisation<i class="fa-solid fa-right-left ms-3"></i></a>
-                                        </div>
-                                        <div class="profile-social-link">
-                                            <h6>Find me on</h6>
-                                            <div class="social-links">
-                                                <a href="#" class="social-link" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="Facebook"><i
-                                                        class="fab fa-facebook-square"></i></a>
-                                                <a href="#" class="social-link" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="Instagram"><i
-                                                        class="fab fa-instagram"></i></a>
-                                                <a href="#" class="social-link" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="Twitter"><i
-                                                        class="fab fa-twitter"></i></a>
-                                                <a href="#" class="social-link" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="LinkedIn"><i
-                                                        class="fab fa-linkedin-in"></i></a>
-                                                <a href="#" class="social-link" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="Youtube"><i
-                                                        class="fab fa-youtube"></i></a>
-                                                <a href="#" class="social-link" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top" title="Website"><i
-                                                        class="fa-solid fa-globe"></i></a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="col-xl-8 col-lg-7 col-md-12">
@@ -376,9 +344,7 @@ defineProps({
                                         <div class="profile-tabs">
                                             <ul class="nav nav-pills nav-fill p-2 garren-line-tab" id="myTab"
                                                 role="tablist">
-                                                <!--                                            <li class="nav-item">-->
-                                                <!--                                                <a class="nav-link active" id="feed-tab" data-bs-toggle="tab" href="#feed" role="tab" aria-controls="feed" aria-selected="true"><i class="fa-solid fa-house"></i>Home</a>-->
-                                                <!--                                            </li>-->
+
                                                 <li class="nav-item">
                                                     <a class="nav-link" id="about-tab" data-bs-toggle="tab"
                                                         href="#about" role="tab" aria-controls="about"
@@ -391,12 +357,7 @@ defineProps({
                                                         aria-selected="false"><i
                                                             class="fa-solid fa-gear"></i>Setting</a>
                                                 </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="orders-tab" data-bs-toggle="tab"
-                                                        href="#orders" role="tab" aria-controls="orders"
-                                                        aria-selected="false"><i class="fa-solid fa-box"></i>My
-                                                        Orders</a>
-                                                </li>
+
                                             </ul>
                                             <div class="tab-content" id="myTabContent">
 
@@ -413,53 +374,48 @@ defineProps({
                                                         </div>
                                                         <div class="about-details">
                                                             <div class="about-step">
-                                                                <h5>Name</h5>
-                                                                <span>{{ profile.firstname }} {{ profile.lastname
-                                                                    }}</span>
+                                                                <div class="table-responsive">
+                                                                    <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                        <div class="table-row table-head no-bg">
+                                                                            <div class="table-col fs-14 text-light3">First Name <span class="red">*</span></div>
+                                                                            <div class="table-col fs-14 text-light3">Last name <span class="red">*</span></div>
+                                                                            <div class="table-col fs-14 text-light3 text-right">Display name</div>
+                                                                        </div>
+                                                                        <div class="table-row ticket-subtype-row">
+                                                                            <div class="table-col first-col">
+                                                                                <div class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="table-col second-col">
+                                                                                <div class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="table-col third-col">
+                                                                                <div class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                        <div class="table-row table-head no-bg">
+                                                                            <div class="table-col fs-14 text-light3">Email Address <span class="red">*</span></div>
+                                                                        </div>
+                                                                        <div class="table-row ticket-subtype-row">
+                                                                            <div class="table-col first-col">
+                                                                                <div class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+
                                                             </div>
-                                                            <div class="about-step">
-                                                                <h5>Tell us about yourself and let people know who you
-                                                                    are</h5>
-                                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur
-                                                                    adipiscing elit. Ut tincidunt interdum nunc et
-                                                                    auctor. Phasellus quis pharetra sapien. Integer
-                                                                    ligula sem, sodales vitae varius in, varius eget
-                                                                    augue.</p>
                                                             </div>
-                                                            <div class="about-step">
-                                                                <h5>Find me on</h5>
-                                                                <div class="social-links">
-                                                                    <a href="#" class="social-link"
-                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                        title="Facebook"><i
-                                                                            class="fab fa-facebook-square"></i></a>
-                                                                    <a href="#" class="social-link"
-                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                        title="Instagram"><i
-                                                                            class="fab fa-instagram"></i></a>
-                                                                    <a href="#" class="social-link"
-                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                        title="Twitter"><i
-                                                                            class="fab fa-twitter"></i></a>
-                                                                    <a href="#" class="social-link"
-                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                        title="LinkedIn"><i
-                                                                            class="fab fa-linkedin-in"></i></a>
-                                                                    <a href="#" class="social-link"
-                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                        title="Youtube"><i
-                                                                            class="fab fa-youtube"></i></a>
-                                                                    <a href="#" class="social-link"
-                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                        title="Website"><i
-                                                                            class="fa-solid fa-globe"></i></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="about-step">
-                                                                <h5>Address</h5>
-                                                                <p class="mb-0">00 Challis St, Newport, Victoria, 0000,
-                                                                    Australia</p>
-                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -473,8 +429,7 @@ defineProps({
                                                                         data-bs-target="#tab-01" type="button"
                                                                         role="tab" aria-controls="tab-01"
                                                                         aria-selected="true"><i
-                                                                            class="fa-solid fa-envelope me-3"></i>Email
-                                                                        Preferences</button>
+                                                                            class="fa-solid fa-envelope me-3"></i>Address</button>
                                                                     <button class="tab-link" data-bs-toggle="tab"
                                                                         data-bs-target="#tab-02" type="button"
                                                                         role="tab" aria-controls="tab-02"
@@ -496,7 +451,7 @@ defineProps({
                                                                     <div class="tab-pane fade show active" id="tab-01"
                                                                         role="tabpanel">
                                                                         <div class="bp-title">
-                                                                            <h4>Email Preferences</h4>
+                                                                            <h4>Address</h4>
                                                                         </div>
                                                                         <div class="profile-setting p-4">
                                                                             <div class="setting-step">
@@ -534,129 +489,7 @@ defineProps({
                                                                                     able send you further follow up
                                                                                     emails.</p>
                                                                             </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        event invitations from event
-                                                                                        organisers sent to my email
-                                                                                        address</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">Organisations will
-                                                                                    be able to send you Invitations in
-                                                                                    their events.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        reminder from Barren for my
-                                                                                        purchased events</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">After purchasing
-                                                                                    event you will receive reminder
-                                                                                    emails before the event starts so
-                                                                                    that you can get prepared.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        critical notifications on Barren
-                                                                                        service status and product
-                                                                                        updates</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">Get updates on new
-                                                                                    features and insights so that you
-                                                                                    can make the best use of Barren.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        newsletters from Barren with
-                                                                                        general and other information
-                                                                                    </h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">Get more insights
-                                                                                    on Barren that can help to boost
-                                                                                    your event business.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        notification when someone
-                                                                                        follows me</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">We will notify you
-                                                                                    when someone starts following you or
-                                                                                    your organisation.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Review
-                                                                                        review notification when someone
-                                                                                        shares my events</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-0">We will notify you
-                                                                                    when someone shares event created by
-                                                                                    your organisation.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        notification on review related
-                                                                                        activities</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-0">We will notify you
-                                                                                    when someone leaves review for your
-                                                                                    organisation.</p>
-                                                                            </div>
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="tab-pane fade" id="tab-02"
@@ -887,60 +720,7 @@ defineProps({
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="orders" role="tabpanel"
-                                                    aria-labelledby="orders-tab">
-                                                    <div class="main-card mt-4">
-                                                        <div class="card-top p-4">
-                                                            <div class="card-event-img">
-                                                                <img src="images/event-imgs/img-7.jpg" alt="">
-                                                            </div>
-                                                            <div class="card-event-dt">
-                                                                <h5>Tutorial on Canvas Painting for Beginners</h5>
-                                                                <div class="invoice-id">Invoice ID :
-                                                                    <span>BRCCRW-11111111</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-bottom">
-                                                            <div class="card-bottom-item">
-                                                                <div class="card-icon">
-                                                                    <i class="fa-solid fa-calendar-days"></i>
-                                                                </div>
-                                                                <div class="card-dt-text">
-                                                                    <h6>Event Starts on</h6>
-                                                                    <span>01 June 2022</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-bottom-item">
-                                                                <div class="card-icon">
-                                                                    <i class="fa-solid fa-ticket"></i>
-                                                                </div>
-                                                                <div class="card-dt-text">
-                                                                    <h6>Total Tickets</h6>
-                                                                    <span>1</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-bottom-item">
-                                                                <div class="card-icon">
-                                                                    <i class="fa-solid fa-money-bill"></i>
-                                                                </div>
-                                                                <div class="card-dt-text">
-                                                                    <h6>Paid Amount</h6>
-                                                                    <span>AUD $50.00</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-bottom-item">
-                                                                <div class="card-icon">
-                                                                    <i class="fa-solid fa-money-bill"></i>
-                                                                </div>
-                                                                <div class="card-dt-text">
-                                                                    <h6>Invoice</h6>
-                                                                    <a href="invoice.html">Download</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
