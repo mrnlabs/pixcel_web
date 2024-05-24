@@ -440,8 +440,8 @@ defineProps({
                                                                         data-bs-target="#tab-03" type="button"
                                                                         role="tab" aria-controls="tab-03"
                                                                         aria-selected="false"><i
-                                                                            class="fa-solid fa-gear me-3"></i>Privacy
-                                                                        Settings</button>
+                                                                            class="fa-solid fa-gear me-3"></i>Payment Method
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -454,40 +454,84 @@ defineProps({
                                                                             <h4>Address</h4>
                                                                         </div>
                                                                         <div class="profile-setting p-4">
-                                                                            <div class="setting-step">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        order confirmation</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
+                                                                            <div class="about-details">
+                                                                                <div class="about-step">
+                                                                                    <div class="table-responsive">
+                                                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                            <div class="table-row table-head no-bg">
+                                                                                                <div class="table-col fs-14 text-light3">First Name <span class="red">*</span></div>
+                                                                                                <div class="table-col fs-14 text-light3">Last name <span class="red">*</span></div>
+                                                                                                <div class="table-col fs-14 text-light3 text-right">Display name</div>
+                                                                                            </div>
+                                                                                            <div class="table-row ticket-subtype-row">
+                                                                                                <div class="table-col first-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="table-col second-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="table-col third-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                            <div class="table-row table-head no-bg">
+                                                                                                <div class="table-col fs-14 text-light3">Street address<span class="red">*</span></div>
+                                                                                                <div class="table-col fs-14 text-light3">Postcode<span class="red">*</span></div>
+                                                                                                <div class="table-col fs-14 text-light3 text-right">Phone</div>
+                                                                                            </div>
+                                                                                            <div class="table-row ticket-subtype-row">
+                                                                                                <div class="table-col first-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="table-col second-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="table-col third-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                            <div class="table-row table-head no-bg">
+                                                                                                <div class="table-col fs-14 text-light3">Country<span class="red">*</span></div>
+                                                                                                <div class="table-col fs-14 text-light3">Province<span class="red">*</span></div>
+                                                                                                <div class="table-col fs-14 text-light3 text-right">Town/City</div>
+                                                                                            </div>
+                                                                                            <div class="table-row ticket-subtype-row">
+                                                                                                <div class="table-col first-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="table-col second-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="table-col third-col">
+                                                                                                    <div class="form-group m-0 form-custom-validation">
+                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <p class="mt-1 mb-4">On purchasing an
-                                                                                    event you will receive an order
-                                                                                    confirmation email.</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Receive
-                                                                                        communication from event
-                                                                                        organisers for my purchased
-                                                                                        events</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">The organisations
-                                                                                    whose events you have bought will be
-                                                                                    able send you further follow up
-                                                                                    emails.</p>
+
                                                                             </div>
 
                                                                         </div>
@@ -552,166 +596,35 @@ defineProps({
                                                                     <div class="tab-pane fade" id="tab-03"
                                                                         role="tabpanel">
                                                                         <div class="bp-title">
-                                                                            <h4>Privacy Settings</h4>
+                                                                            <h4>Payment Methods</h4>
                                                                         </div>
                                                                         <div class="privacy-setting p-4">
-                                                                            <div class="setting-step">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Lock my
-                                                                                        user profile</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
+                                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                <div class="table-row table-head no-bg">
+                                                                                    <div class="table-col fs-14 text-light3">Method <span class="red">*</span></div>
+                                                                                    <div class="table-col fs-14 text-light3">Expires<span class="red">*</span></div>
                                                                                 </div>
-                                                                                <p class="mt-1 mb-4">Locking profile
-                                                                                    hides all kinds of user information,
-                                                                                    activities and interaction from
-                                                                                    public profile</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to contact me</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
+                                                                                <div class="table-row ticket-subtype-row">
+                                                                                    <div class="table-col first-col">
+                                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                                            <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="table-col second-col">
+                                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                                            <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="table-col third-col">
+                                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                                            <button
+                                                                                                class="main-btn btn-hover ms-auto edit-btn me-3 pe-4 ps-4 h_40"
+                                                                                                data-bs-toggle="modal" data-bs-target="#aboutModal">
+                                                                                                <i class="fa-regular fa-pen-to-square me-2"></i>Add
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <p class="mt-1 mb-4">People will be able
-                                                                                    to send you emails through Barren
-                                                                                    who visits your profile</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to find and invite me to
-                                                                                        relevant events</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">Based on your
-                                                                                    preferences event organisers will be
-                                                                                    able to send you invitations in
-                                                                                    their events</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to follow me</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">People will be able
-                                                                                    to follow you</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to see my followings</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">People will be able
-                                                                                    to see whom and which organisations
-                                                                                    you are following</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to see my join date</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">People will be able
-                                                                                    to see when you have started using
-                                                                                    Barren</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to see the events I
-                                                                                        attend</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-4">People will be able
-                                                                                    to see the events you have purchased
-                                                                                </p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to see the events I join
-                                                                                        as speaker</h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-0">People will be able
-                                                                                    to see the events you have joined as
-                                                                                    Speaker</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Allow
-                                                                                        people to see the events I share
-                                                                                    </h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox"
-                                                                                            checked="">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-0">People will be able
-                                                                                    to see the events you have shared in
-                                                                                    Barren</p>
-                                                                            </div>
-                                                                            <div class="setting-step pt-4">
-                                                                                <div
-                                                                                    class="d-flex align-items-center justify-content-between">
-                                                                                    <h3 class="setting-title">Hide
-                                                                                        review interactions from public
-                                                                                    </h3>
-                                                                                    <label class="btn-switch m-0 ml-2">
-                                                                                        <input type="checkbox">
-                                                                                        <span
-                                                                                            class="checkbox-slider"></span>
-                                                                                    </label>
-                                                                                </div>
-                                                                                <p class="mt-1 mb-0">The reviews and
-                                                                                    ratings given by you will not appear
-                                                                                    in your public profile</p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
