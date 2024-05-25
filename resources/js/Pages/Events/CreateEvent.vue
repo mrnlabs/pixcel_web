@@ -15,11 +15,59 @@ export default {
                 front_rear_camera: '',
                 camera_exposure: '',
                 qr_app_protection: '',
+                motion_trigger : '',
+                front_or_rear_camera : '',
+                camera_exposure_menu_item : '',
+                boomerang : '',
+                videos : '',
+                slomo : '',
+                boomerang_repeats : '',
+                boomerang_speed : '',
+                boomerang_bounce : '',
+                duration : '',
+                gif_number_of_photos : '',
+                gif_frame_duration : '',
+                video_maximum_duration : '',
+                slomo_recording_time : '',
+                slomo_boomerang : '',
+                speed : '',
+                add_audio_file : '',
+                time_outs : '',
+                editing : '',
+                sharing: '',
+                thanks_message : '',
+                props : '',
+                sharing_method : {
+                    email : '',
+                    sms : '',
+                    in_app : '',
+                    download: '',
+                    airdrop: '',
+                    qr:'',
+                    general:'',
+                    whatsapp: ''
+                },
+                edit_active : '',
+                in_app_active : '',
+                gallery : '',
+                email_subject : '',
+                text_email : '',
+                text_message : '',
+                webgallery_email_subject : '',
+                webgallery_email_message : '',
+                social_share_description : '',
+
             }
         }
     },
     methods: {
+
+        handleFileUpload(event) {
+            const file = event.target.files[0];
+            this.form.add_audio_file = file;
+        },
         submit() {
+            console.log(this.form);
             this.$inertia.post('/create-event', this.form)
         }
     },
@@ -131,7 +179,7 @@ export default {
                                                             <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                 <h4 class="fs-14 mb-0 me-auto">Front or rear camera</h4>
                                                                 <label class="btn-switch m-0 me-3">
-                                                                    <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                    <input type="checkbox"   v-model="form.front_rear_camera">
                                                                     <span class="checkbox-slider"></span>
                                                                 </label>
 
@@ -139,7 +187,7 @@ export default {
                                                             <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                 <h4 class="fs-14 mb-0 me-auto">Camera exposure menu</h4>
                                                                 <label class="btn-switch m-0 me-3">
-                                                                    <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
+                                                                    <input type="checkbox"   v-model="form.camera_exposure" >
                                                                     <span class="checkbox-slider"></span>
                                                                 </label>
 
@@ -147,7 +195,7 @@ export default {
                                                             <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                 <h4 class="fs-14 mb-0 me-auto">QR app protection</h4>
                                                                 <label class="btn-switch m-0 me-3">
-                                                                    <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                    <input type="checkbox"  v-model="form.qr_app_protection">
                                                                     <span class="checkbox-slider"></span>
                                                                 </label>
 
@@ -170,30 +218,23 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Boomerang</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                        <input type="checkbox"   v-model="form.boomerang">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
                                                                 </div>
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">Animated GIF</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
 
-                                                                </div>
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Videos</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.videos">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Slomo</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.slomo">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -211,48 +252,23 @@ export default {
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                            <input class="form-control h_40" type="number" min="1" max="20" required="" v-model="form.boomerang_repeats">
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                            <input class="form-control h_40" type="number" min="1" max="15" required="" v-model="form.boomerang_repeats">
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                            <input class="form-control h_40" type="number" min="0" max="10" required="" v-model="form.boomerang_bounce">
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="table-responsive">
-                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
-                                                                <div class="table-row table-head no-bg">
-                                                                    <div class="table-col fs-14 text-light3">GIF number of photos  <span class="red">*</span></div>
-                                                                    <div class="table-col fs-14 text-light3">GIF frame duration<span class="red">*</span></div>
-                                                                    <div class="table-col fs-14 text-light3 text-right">Video maximum duration</div>
-                                                                </div>
-                                                                <div class="table-row ticket-subtype-row">
-                                                                    <div class="table-col first-col">
-                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="table-col first-col">
-                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="table-col first-col">
-                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                     <div class="table-responsive">
                                                         <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
@@ -264,17 +280,20 @@ export default {
                                                             <div class="table-row ticket-subtype-row">
                                                                 <div class="table-col first-col">
                                                                     <div class="form-group m-0 form-custom-validation">
-                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        <input class="form-control h_40" type="number"   v-model="form.slomo_recording_time">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-col first-col">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <label class="btn-switch m-0 me-3">
+                                                                            <input type="checkbox" class=""  v-model="form.slomo_boomerang" >
+                                                                            <span class="checkbox-slider"></span>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="table-col first-col">
                                                                     <div class="form-group m-0 form-custom-validation">
-                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="table-col first-col">
-                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                        <input class="form-control h_40" type="number" min="2" max="5"  v-model="form.speed">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -284,19 +303,13 @@ export default {
                                                         <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                             <div class="table-row table-head no-bg">
                                                                 <div class="table-col fs-14 text-light3">Add audio file<span class="red">*</span></div>
-                                                                <div class="table-col fs-14 text-light3">Screen flash<span class="red">*</span></div>
                                                             </div>
                                                             <div class="table-row ticket-subtype-row">
-                                                                <div class="table-col first-col">
-                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                        <input class="form-control h_40" type="file" min="1" max="10" required="" >
-                                                                    </div>
-                                                                </div>
-                                                                <div class="table-col first-col">
-                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                        <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
-                                                                    </div>
-                                                                </div>
+                                                                <input
+                                                                    class="form-control h_40"
+                                                                    type="file"
+                                                                    @change="handleFileUpload"
+                                                                />
 
                                                             </div>
                                                         </div>
@@ -319,12 +332,12 @@ export default {
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.editing">
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.sharing">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -337,7 +350,7 @@ export default {
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="10" required="" v-model="form.count_down">
+                                                                            <input class="form-control h_40" type="number" min="1" max="20" >
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
@@ -370,7 +383,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Email</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                        <input type="checkbox"   v-model="form.sharing_method.email">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -378,7 +391,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">SMS</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
+                                                                        <input type="checkbox"   v-model="form.sharing_method.sms" >
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -386,14 +399,14 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Download</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.sharing_method.download">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Airdrop</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.sharing_method.airdrop">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -401,7 +414,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">QR</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.sharing_method.qr">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -409,7 +422,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">General</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.sharing_method.general">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -417,7 +430,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Whatsapp</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.sharing_method.whatsapp">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -425,7 +438,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">In-app gallery</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.sharing_method.in_app">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -433,7 +446,6 @@ export default {
                                                             </div>
                                                         </div>
                                                         <div class="table-responsive">
-
                                                             <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                                 <div class="table-row table-head no-bg">
                                                                     <div class="table-col fs-14 text-light3">Email Subject<span class="red">*</span></div>
@@ -502,7 +514,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Gallery name</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.front_rear_camera">
+                                                                        <input type="checkbox"   v-model="form.front_rear_camera">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -510,7 +522,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">App Logo</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket"  v-model="form.camera_exposure" >
+                                                                        <input type="checkbox"   v-model="form.camera_exposure" >
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -518,14 +530,14 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Attract screen(foreground)</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">App background</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -533,7 +545,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Text and button color</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
 
@@ -541,7 +553,7 @@ export default {
                                                                 <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Webgallery background</h4>
                                                                     <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox" id="is-restrict-total-ticket" v-model="form.qr_app_protection">
+                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
                                                                         <span class="checkbox-slider"></span>
                                                                     </label>
                                                                 </div>
@@ -603,7 +615,9 @@ export default {
                                                             </div>
                                                         </div>
                                                     </div>
-
+                                                    <div class="btn-submit">
+                                                        <button class="main-btn btn-hover h_50 w-100" type="submit">Submit</button>
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>

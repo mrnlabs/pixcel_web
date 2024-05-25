@@ -46,18 +46,17 @@ class EventController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request
-    )
+    public function store(CreateEventRequest $createEventRequest)
     {
 
         try{
-            $new_event = $this->eventService->createEvent($request->all());
-//            if($new_event){
-//                $createVideoSettingsRequest['event_id'] = $new_event->id;
-//                $createSharingSettingsRequest['event_id'] = $new_event->id;
-//                $this->videoSettingsService->createVideoSettings($createVideoSettingsRequest->validated());
-//                $this->sharingSettingService->createSharingSettings($createSharingSettingsRequest->validated());
-//            }
+            $new_event = $this->eventService->createEvent($createEventRequest->validated());
+            if($new_event){
+                $createVideoSettingsRequest['event_id'] = $new_event->id;
+               // $createSharingSettingsRequest['event_id'] = $new_event->id;
+                $this->videoSettingsService->createVideoSettings($createVideoSettingsRequest->validated());
+               // $this->sharingSettingService->createSharingSettings($createSharingSettingsRequest->validated());
+            }
            // redirect to /events route
             return redirect()->route('events');
         } catch (\Exception $e){
