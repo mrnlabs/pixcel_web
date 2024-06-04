@@ -66,11 +66,13 @@ import SideNavbar from "@/Components/SideNavbar.vue";
                                                                 <td>01/01/2022</td>
                                                                 <td>$100</td>
 
-                                                                <td><Link href="/view-subscription" class="co-main-btn" data-bs-toggle="modal" data-bs-target="#qrModal">View</Link></td>
-
-                                                                <td><a href="#" class=" btn btn-danger btn-sm"
+                                                                <td>
+                                                                    <Link href="/view-subscription" class="co-main-btn"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#qrModal">Delete</a></td>
+                                                                        data-bs-target="#qrModal">View</Link>
+                                                                </td>
+
+
 
                                                             </tr>
 
@@ -87,8 +89,6 @@ import SideNavbar from "@/Components/SideNavbar.vue";
                 </div>
             </div>
         </div>
-
-
 
         <!-- Body End -->
     </AuthenticatedLayout>
