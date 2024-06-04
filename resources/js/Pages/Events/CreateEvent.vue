@@ -350,7 +350,7 @@ export default {
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <input class="form-control h_40" type="number" min="1" max="20" >
+                                                                            <input class="form-control h_40" type="number" min="1" max="20" v-model="form.thanks_message" >
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
@@ -360,7 +360,6 @@ export default {
                                                                     </div>
                                                                 </div>
                                                             </div>
-
 
                                                         </div>
                                                     </div>
@@ -455,17 +454,17 @@ export default {
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <textarea v-model="form.email_subject" ></textarea>
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <textarea v-model="form.text_email"></textarea>
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <textarea v-model="form.text_message"></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -482,17 +481,17 @@ export default {
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <textarea v-model="form.webgallery_email_subject"></textarea>
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <textarea v-model="form.webgallery_email_message"></textarea>
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <textarea v-model="form.social_share_description"></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -509,111 +508,147 @@ export default {
                                                                 Branding</h5>
                                                         </div>
 
-                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
-                                                            <div class="form-group border_bottom">
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">Gallery name</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox"   v-model="form.front_rear_camera">
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
-
-                                                                </div>
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">App Logo</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox"   v-model="form.camera_exposure" >
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
-
-                                                                </div>
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">Attract screen(foreground)</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">App background</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
-
-                                                                </div>
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">Text and button color</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
-
-                                                                </div>
-                                                                <div class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
-                                                                    <h4 class="fs-14 mb-0 me-auto">Webgallery background</h4>
-                                                                    <label class="btn-switch m-0 me-3">
-                                                                        <input type="checkbox"  v-model="form.qr_app_protection">
-                                                                        <span class="checkbox-slider"></span>
-                                                                    </label>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
                                                         <div class="table-responsive">
-
                                                             <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                                 <div class="table-row table-head no-bg">
-                                                                    <div class="table-col fs-14 text-light3">Email Subject<span class="red">*</span></div>
-                                                                    <div class="table-col fs-14 text-light3">Default Text (email)<span class="red">*</span></div>
-                                                                    <div class="table-col fs-14 text-light3 text-right">Text message (SMS)</div>
+                                                                    <div class="table-col fs-14 text-light3">Gallery Name <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Boomerang bounce duration</div>
                                                                 </div>
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <input class="form-control h_40" type="text"  v-model="form.gallery">
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <input class="form-control h_40" type="file"   >
                                                                         </div>
                                                                     </div>
-                                                                    <div class="table-col first-col">
-                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
-                                                                        </div>
-                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="table-responsive">
 
+                                                        <div class="table-responsive">
                                                             <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                                 <div class="table-row table-head no-bg">
-                                                                    <div class="table-col fs-14 text-light3">Webgallery email subject<span class="red">*</span></div>
-                                                                    <div class="table-col fs-14 text-light3">Webgallery email message<span class="red">*</span></div>
-                                                                    <div class="table-col fs-14 text-light3 text-right">Social Share description</div>
+                                                                    <div class="table-col fs-14 text-light3">Attract screen (foreground) <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">App Background</div>
                                                                 </div>
                                                                 <div class="table-row ticket-subtype-row">
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <input class="form-control h_40" type="file"  >
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-col first-col">
                                                                         <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
+                                                                            <input class="form-control h_40" type="file"   >
                                                                         </div>
                                                                     </div>
-                                                                    <div class="table-col first-col">
-                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                            <textarea></textarea>
-                                                                        </div>
-                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Text and Button<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Webgallery Background</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="color"  >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="file"   >
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                     
+                                                </div>
+
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="main-card p-4 mt-4">
+                                                        <div class="d-flex align-items-center justify-content-between price-variation-head">
+                                                            <h5 class="m-0 color-black fs-16">
+                                                                Branding</h5>
+                                                        </div>
+
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Gallery Name <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Boomerang bounce duration</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="text"  v-model="form.gallery">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="file"   >
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Attract screen (foreground) <span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">App Background</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="file"  >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="file"   >
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                <div class="table-row table-head no-bg">
+                                                                    <div class="table-col fs-14 text-light3">Text and Button<span class="red">*</span></div>
+                                                                    <div class="table-col fs-14 text-light3 text-right">Webgallery Background</div>
+                                                                </div>
+                                                                <div class="table-row ticket-subtype-row">
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="color"  >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="table-col first-col">
+                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                            <input class="form-control h_40" type="file"   >
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                     <div class="btn-submit">
                                                         <button class="main-btn btn-hover h_50 w-100" type="submit">Submit</button>
