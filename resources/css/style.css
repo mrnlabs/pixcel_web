@@ -507,7 +507,7 @@ body {
     border: 2px solid #045cc7;
     background-color: #045cc7;
     padding: 8px 18px;
-    border-radius: 3px;
+    border-radius: 10px;
     text-transform: capitalize;
     letter-spacing: 0.2px;
 }
@@ -905,7 +905,7 @@ body {
     display: inline-block;
     line-height: 49px;
     padding: 0 30px;
-    border-radius: 3px;
+    border-radius: 10px;
     border: 1px solid #045cc7;
 }
 
@@ -918,14 +918,14 @@ body {
 .co-main-btn {
     color: #000;
     background: #fff !important;
-    border-radius: 3px;
+    border-radius: 10px;
     Border: 1px solid #0f6ad8;
 }
 
 .co-main-btn:hover {
     color: #000 !important;
     background: #e8f7f7 !important;
-    border-radius: 3px;
+    border-radius: 10px;
     Border: 1px solid #0f6ad8;
 }
 
@@ -1555,8 +1555,8 @@ body {
     font-size: 14px !important;
     color: #717171 !important;
     background-color: #fff !important;
-    border: 1px solid #efefef !important;
-    border-radius: 3px !important;
+    border: 1px solid #585858 !important;
+    border-radius: 10px !important;
     transition: none !important;
     padding: 0 15px !important;
     min-height: 40px;
@@ -1919,7 +1919,7 @@ body {
 .form-label {
     font-size: 14px;
     font-weight: 500;
-    color: #000;
+    color: #585858;
     margin-bottom: 10px;
     display: block;
 }
@@ -1939,6 +1939,7 @@ body {
 .social-login-btn:hover {
     background: #F5F5F5;
 }
+
 
 .registration .form-control {
     background-color: #f9f9f9 !important;
@@ -3062,14 +3063,15 @@ body {
 }
 
 .modal-title {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 1000;
     font-family: inherit;
     color: #000;
 }
 
 .modal-header {
     border-bottom: 1px solid #efefef !important;
+    padding: 20px 30px !important;
 }
 
 .modal-footer {

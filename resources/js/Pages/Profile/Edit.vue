@@ -106,176 +106,57 @@ defineProps({
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="aboutModalLabel">Edit Details</h5>
-                            <button type="button" class="close-model-btn" data-bs-dismiss="modal" aria-label="Close"><i
-                                    class="uil uil-multiply"></i></button>
+                            <button type="button" class="close-model-btn" data-bs-dismiss="modal"
+                                aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg></button>
                         </div>
                         <div class="modal-body">
                             <div class="model-content main-form">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <div class="form-group mt-4">
-                                            <label class="form-label">First Name*</label>
+                                            <label class="form-label">First Name</label>
                                             <input class="form-control h_40" type="text" placeholder="" value="John">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <div class="form-group mt-4">
-                                            <label class="form-label">Last Name*</label>
+                                            <label class="form-label">Last Name</label>
                                             <input class="form-control h_40" type="text" placeholder="" value="Doe">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group mt-4">
-                                            <label class="form-label">Bio*</label>
-                                            <textarea class="form-textarea" placeholder=""></textarea>
+                                            <label class="form-label">Card Number</label>
+                                            <input class="form-control h_40" type="text" placeholder="000 000 000 000"
+                                                value="">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-12">
+                                    <!-- <div class="col-lg-6 col-md-12">
                                         <div class="form-group mt-4">
                                             <label class="form-label">Email*</label>
                                             <input class="form-control h_40" type="text" placeholder=""
                                                 value="Johndoe@example.com">
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Phone*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Website*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Facebook*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Instagram*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Twitter*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">LinkedIn*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Youtube*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-lg-12 col-md-12">
-                                        <h4 class="address-title">Address</h4>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
                                         <div class="form-group mt-4">
-                                            <label class="form-label">Address 1*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
+                                            <label class="form-label">Expiry Date</label>
+                                            <input class="form-control h_40" type="date" placeholder="MM/DD/YYYY"
+                                                value="">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-12">
+
+                                    <div class="col-lg-12 col-md-12">
                                         <div class="form-group mt-4">
-                                            <label class="form-label">Address 2*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
+                                            <label class="form-label">Security Code</label>
+                                            <input class="form-control h_40" type="text" placeholder="000" value="">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group main-form mt-4">
-                                            <label class="form-label">Country*</label>
-                                            <select class="selectpicker" data-size="5" title="Nothing selected"
-                                                data-live-search="true">
-                                                <option value="Algeria">Algeria</option>
-                                                <option value="Argentina">Argentina</option>
-                                                <option value="Australia">Australia</option>
-                                                <option value="Austria">Austria (Österreich)</option>
-                                                <option value="Belgium">Belgium (België)</option>
-                                                <option value="Bolivia">Bolivia</option>
-                                                <option value="Brazil">Brazil</option>
-                                                <option value="Canada">Canada</option>
-                                                <option value="Chile">Chile</option>
-                                                <option value="Colombia">Colombia</option>
-                                                <option value="Costa Rica">Costa Rica</option>
-                                                <option value="Cyprus">Cyprus</option>
-                                                <option value="Czech Republic">Czech Republic</option>
-                                                <option value="Denmark">Denmark</option>
-                                                <option value="Dominican Republic">Dominican Republic</option>
-                                                <option value="Estonia">Estonia</option>
-                                                <option value="Finland">Finland</option>
-                                                <option value="France">France</option>
-                                                <option value="Germany">Germany</option>
-                                                <option value="Greece">Greece</option>
-                                                <option value="Hong Kong">Hong Kong</option>
-                                                <option value="Iceland">Iceland</option>
-                                                <option value="India">India</option>
-                                                <option value="Indonesia">Indonesia</option>
-                                                <option value="Ireland">Ireland</option>
-                                                <option value="Israel">Israel</option>
-                                                <option value="Italy">Italy</option>
-                                                <option value="Japan">Japan</option>
-                                                <option value="Latvia">Latvia</option>
-                                                <option value="Lithuania">Lithuania</option>
-                                                <option value="Luxembourg">Luxembourg</option>
-                                                <option value="Malaysia">Malaysia</option>
-                                                <option value="Mexico">Mexico</option>
-                                                <option value="Nepal">Nepal</option>
-                                                <option value="Netherlands">Netherlands</option>
-                                                <option value="New Zealand">New Zealand</option>
-                                                <option value="Norway">Norway</option>
-                                                <option value="Paraguay">Paraguay</option>
-                                                <option value="Peru">Peru</option>
-                                                <option value="Philippines">Philippines</option>
-                                                <option value="Poland">Poland</option>
-                                                <option value="Portugal">Portugal</option>
-                                                <option value="Singapore">Singapore</option>
-                                                <option value="Slovakia">Slovakia</option>
-                                                <option value="Slovenia">Slovenia</option>
-                                                <option value="South Africa">South Africa</option>
-                                                <option value="South Korea">South Korea</option>
-                                                <option value="Spain">Spain</option>
-                                                <option value="Sweden">Sweden</option>
-                                                <option value="Switzerland">Switzerland</option>
-                                                <option value="Tanzania">Tanzania</option>
-                                                <option value="Thailand">Thailand</option>
-                                                <option value="Turkey">Turkey</option>
-                                                <option value="United Kingdom">United Kingdom</option>
-                                                <option value="United States">United States</option>
-                                                <option value="Vietnam">Vietnam</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">State*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">City/Suburb*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <div class="form-group mt-4">
-                                            <label class="form-label">Zip/Post Code*</label>
-                                            <input class="form-control h_40" type="text" placeholder="" value="">
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -375,45 +256,67 @@ defineProps({
                                                         <div class="about-details">
                                                             <div class="about-step">
                                                                 <div class="table-responsive">
-                                                                    <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                    <div
+                                                                        class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                                         <div class="table-row table-head no-bg">
-                                                                            <div class="table-col fs-14 text-light3">First Name <span class="red">*</span></div>
-                                                                            <div class="table-col fs-14 text-light3">Last name <span class="red">*</span></div>
-                                                                            <div class="table-col fs-14 text-light3 text-right">Display name</div>
+                                                                            <div class="table-col fs-14 text-light3">
+                                                                                First Name <span class="red">*</span>
+                                                                            </div>
+                                                                            <div class="table-col fs-14 text-light3">
+                                                                                Last name <span class="red">*</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="table-col fs-14 text-light3 text-right">
+                                                                                Display name</div>
                                                                         </div>
                                                                         <div class="table-row ticket-subtype-row">
                                                                             <div class="table-col first-col">
-                                                                                <div class="form-group m-0 form-custom-validation">
-                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                <div
+                                                                                    class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40"
+                                                                                        type="text"
+                                                                                        placeholder="Event Name">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="table-col second-col">
-                                                                                <div class="form-group m-0 form-custom-validation">
-                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                <div
+                                                                                    class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40"
+                                                                                        type="text"
+                                                                                        placeholder="Event Name">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="table-col third-col">
-                                                                                <div class="form-group m-0 form-custom-validation">
-                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                <div
+                                                                                    class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40"
+                                                                                        type="text"
+                                                                                        placeholder="Event Name">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                    <div
+                                                                        class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                                         <div class="table-row table-head no-bg">
-                                                                            <div class="table-col fs-14 text-light3">Email Address <span class="red">*</span></div>
+                                                                            <div class="table-col fs-14 text-light3">
+                                                                                Email Address <span class="red">*</span>
+                                                                            </div>
                                                                         </div>
                                                                         <div class="table-row ticket-subtype-row">
                                                                             <div class="table-col first-col">
-                                                                                <div class="form-group m-0 form-custom-validation">
-                                                                                    <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                <div
+                                                                                    class="form-group m-0 form-custom-validation">
+                                                                                    <input class="form-control h_40"
+                                                                                        type="text"
+                                                                                        placeholder="Event Name">
                                                                                 </div>
                                                                             </div>
 
                                                                         </div>
                                                                     </div>
 
-                                                            </div>
+                                                                </div>
                                                             </div>
 
                                                         </div>
@@ -440,7 +343,8 @@ defineProps({
                                                                         data-bs-target="#tab-03" type="button"
                                                                         role="tab" aria-controls="tab-03"
                                                                         aria-selected="false"><i
-                                                                            class="fa-solid fa-gear me-3"></i>Payment Method
+                                                                            class="fa-solid fa-gear me-3"></i>Payment
+                                                                        Method
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -457,74 +361,158 @@ defineProps({
                                                                             <div class="about-details">
                                                                                 <div class="about-step">
                                                                                     <div class="table-responsive">
-                                                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
-                                                                                            <div class="table-row table-head no-bg">
-                                                                                                <div class="table-col fs-14 text-light3">First Name <span class="red">*</span></div>
-                                                                                                <div class="table-col fs-14 text-light3">Last name <span class="red">*</span></div>
-                                                                                                <div class="table-col fs-14 text-light3 text-right">Display name</div>
+                                                                                        <div
+                                                                                            class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                            <div
+                                                                                                class="table-row table-head no-bg">
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3">
+                                                                                                    First Name <span
+                                                                                                        class="red">*</span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3">
+                                                                                                    Last name <span
+                                                                                                        class="red">*</span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3 text-right">
+                                                                                                    Display name</div>
                                                                                             </div>
-                                                                                            <div class="table-row ticket-subtype-row">
-                                                                                                <div class="table-col first-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                            <div
+                                                                                                class="table-row ticket-subtype-row">
+                                                                                                <div
+                                                                                                    class="table-col first-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="table-col second-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                <div
+                                                                                                    class="table-col second-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="table-col third-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                <div
+                                                                                                    class="table-col third-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
-                                                                                            <div class="table-row table-head no-bg">
-                                                                                                <div class="table-col fs-14 text-light3">Street address<span class="red">*</span></div>
-                                                                                                <div class="table-col fs-14 text-light3">Postcode<span class="red">*</span></div>
-                                                                                                <div class="table-col fs-14 text-light3 text-right">Phone</div>
+                                                                                        <div
+                                                                                            class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                            <div
+                                                                                                class="table-row table-head no-bg">
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3">
+                                                                                                    Street address<span
+                                                                                                        class="red">*</span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3">
+                                                                                                    Postcode<span
+                                                                                                        class="red">*</span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3 text-right">
+                                                                                                    Phone</div>
                                                                                             </div>
-                                                                                            <div class="table-row ticket-subtype-row">
-                                                                                                <div class="table-col first-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                            <div
+                                                                                                class="table-row ticket-subtype-row">
+                                                                                                <div
+                                                                                                    class="table-col first-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="table-col second-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                <div
+                                                                                                    class="table-col second-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="table-col third-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                <div
+                                                                                                    class="table-col third-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
-                                                                                            <div class="table-row table-head no-bg">
-                                                                                                <div class="table-col fs-14 text-light3">Country<span class="red">*</span></div>
-                                                                                                <div class="table-col fs-14 text-light3">Province<span class="red">*</span></div>
-                                                                                                <div class="table-col fs-14 text-light3 text-right">Town/City</div>
+                                                                                        <div
+                                                                                            class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                                            <div
+                                                                                                class="table-row table-head no-bg">
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3">
+                                                                                                    Country<span
+                                                                                                        class="red">*</span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3">
+                                                                                                    Province<span
+                                                                                                        class="red">*</span>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="table-col fs-14 text-light3 text-right">
+                                                                                                    Town/City</div>
                                                                                             </div>
-                                                                                            <div class="table-row ticket-subtype-row">
-                                                                                                <div class="table-col first-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                            <div
+                                                                                                class="table-row ticket-subtype-row">
+                                                                                                <div
+                                                                                                    class="table-col first-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="table-col second-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                <div
+                                                                                                    class="table-col second-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="table-col third-col">
-                                                                                                    <div class="form-group m-0 form-custom-validation">
-                                                                                                        <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                                <div
+                                                                                                    class="table-col third-col">
+                                                                                                    <div
+                                                                                                        class="form-group m-0 form-custom-validation">
+                                                                                                        <input
+                                                                                                            class="form-control h_40"
+                                                                                                            type="text"
+                                                                                                            placeholder="Event Name">
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -599,28 +587,47 @@ defineProps({
                                                                             <h4>Payment Methods</h4>
                                                                         </div>
                                                                         <div class="privacy-setting p-4">
-                                                                            <div class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
+                                                                            <div
+                                                                                class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
                                                                                 <div class="table-row table-head no-bg">
-                                                                                    <div class="table-col fs-14 text-light3">Method <span class="red">*</span></div>
-                                                                                    <div class="table-col fs-14 text-light3">Expires<span class="red">*</span></div>
+                                                                                    <div
+                                                                                        class="table-col fs-14 text-light3">
+                                                                                        Method <span
+                                                                                            class="red">*</span></div>
+                                                                                    <div
+                                                                                        class="table-col fs-14 text-light3">
+                                                                                        Expires<span
+                                                                                            class="red">*</span></div>
                                                                                 </div>
-                                                                                <div class="table-row ticket-subtype-row">
+                                                                                <div
+                                                                                    class="table-row ticket-subtype-row">
                                                                                     <div class="table-col first-col">
-                                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                                            <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                        <div
+                                                                                            class="form-group m-0 form-custom-validation">
+                                                                                            <input
+                                                                                                class="form-control h_40"
+                                                                                                type="text"
+                                                                                                placeholder="Event Name">
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="table-col second-col">
-                                                                                        <div class="form-group m-0 form-custom-validation">
-                                                                                            <input class="form-control h_40" type="text" placeholder="Event Name" >
+                                                                                        <div
+                                                                                            class="form-group m-0 form-custom-validation">
+                                                                                            <input
+                                                                                                class="form-control h_40"
+                                                                                                type="text"
+                                                                                                placeholder="Event Name">
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="table-col third-col">
-                                                                                        <div class="form-group m-0 form-custom-validation">
+                                                                                        <div
+                                                                                            class="form-group m-0 form-custom-validation">
                                                                                             <button
                                                                                                 class="main-btn btn-hover ms-auto edit-btn me-3 pe-4 ps-4 h_40"
-                                                                                                data-bs-toggle="modal" data-bs-target="#aboutModal">
-                                                                                                <i class="fa-regular fa-pen-to-square me-2"></i>Add
+                                                                                                data-bs-toggle="modal"
+                                                                                                data-bs-target="#aboutModal">
+                                                                                                <i
+                                                                                                    class="fa-regular fa-pen-to-square me-2"></i>Add
                                                                                             </button>
                                                                                         </div>
                                                                                     </div>
