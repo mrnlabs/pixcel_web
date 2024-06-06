@@ -194,6 +194,12 @@ q:after {
     content: none;
 }
 
+/* //////////////// */
+.hover-pointer {
+    cursor: pointer;
+}
+
+/* //////////////// */
 button {
     outline: none;
 }
