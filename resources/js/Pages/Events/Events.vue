@@ -56,7 +56,7 @@ const duplicateEvent = (event) => {
 </script>
 
 <template>
-    <Head title="All Events" />
+    <Head title="My Events" />
     <AuthenticatedLayout>
         <!-- Left Sidebar Start -->
 			<!-- Left Sidebar End -->
@@ -78,9 +78,6 @@ const duplicateEvent = (event) => {
 												<i class="uil uil-search"></i>
 											</div>
 										</div>
-									</div>
-									<div class="rs ms-auto mt-4 mt_r4">
-										<a href="#" class="pe-4 w-100 ps-4 text-center co-main-btn h_40 d-inline-block"><i class="fa-solid fa-arrow-rotate-right me-3"></i>Refresh</a>
 									</div>
 								</div>
 							</div>

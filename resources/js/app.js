@@ -10,6 +10,9 @@ import '../css/vendor/fontawesome-free/css/all.min.css'
 import '../custom_js/custom.js';
 import '../custom_js/vertical-responsive-menu.min.js'
 import $ from 'jquery';
+import PrimeVue from 'primevue/config';
+import 'primevue/resources/themes/aura-light-green/theme.css'
+
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -25,6 +28,7 @@ createInertiaApp({
         return createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(PrimeVue)
             .use($)
             .mount(el);
     },

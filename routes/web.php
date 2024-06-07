@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function () {
 
     //profile
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('update_profile');
+    Route::post('/update-profile-picture/{type}', [ProfileController::class, 'updatePicture'])->name('update_pro_pic');
 
     //subscriptions
     Route::get('/subscriptions', [SubscriptionController::class, 'index'])->name('subscriptions');

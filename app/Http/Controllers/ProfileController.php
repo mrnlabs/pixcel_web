@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Services\ProfileService;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -19,8 +20,11 @@ class ProfileController extends Controller
     public function index()
     {
         $profile =  $this->profileService->getProfile();
-
-        return Inertia::render('Profile/Edit' , ['profile' => $profile]);
+        $isMyProfile = request('id') ?  false : true;
+        return Inertia::render('Profile/Edit' , 
+        ['profile' => $profile,
+        'isMyProfile' => $isMyProfile
+    ]);
     }
 
     /**
@@ -50,17 +54,22 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function updatePicture(Request $request, string $type)
     {
-        //
+        dd($request);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        try {
+            User::find($request->id)->update($request->all());
+            return back()->with('success', 'Profile updated successfully!');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

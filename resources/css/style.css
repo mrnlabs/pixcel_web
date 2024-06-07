@@ -901,6 +901,14 @@ body {
     line-height: 32px;
 }
 
+/* By Mazisi:For btn spinner */
+.spinner-border {
+    --bs-spinner-vertical-align: -0.525em;
+    margin-right: 1rem;
+}
+
+
+
 .main-btn {
     font-size: 16px;
     color: #fff;
@@ -911,7 +919,7 @@ body {
     display: inline-block;
     line-height: 49px;
     padding: 0 30px;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 1px solid #045cc7;
 }
 
