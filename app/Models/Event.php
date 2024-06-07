@@ -29,5 +29,7 @@ class Event extends Model
         return $this->hasOne(SharingSetting::class);
     }
 
+ 
+
 }
 

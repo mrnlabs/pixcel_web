@@ -8,7 +8,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <Header />
-    <!-- <SideNavbar class="side"/> -->
+    <SideNavbar class="side"/>
     <div>
         <!-- hero banner here -->
         <main>

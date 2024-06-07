@@ -1,44 +1,52 @@
-<script>
+<script setup>
 import { Link } from '@inertiajs/vue3';
-export default {
-    components: {
-        Link
-    }
-}
+const props = defineProps({
+	
+})
+console.log(props)
 </script>
 <template>
   <nav class="vertical_nav">
 		<div class="left_section menu_left" id="js-menu">
 			<div class="left_section">
 				<ul>
-					<li class="menu--item">
+					<li class="menu--item" :class="{ active:  $page.props.currentRoute == 'dashboard'}">
 						<Link href="/dashboard" class="menu--link" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-gauge menu--icon"></i>
 							<span class="menu--label">Dashboard</span>
 						</Link>
 					</li>
-					<li class="menu--item">
-						<Link href="/events" class="menu--link" title="Events" data-bs-toggle="tooltip" data-bs-placement="right">
+					<li class="menu--item" >
+						<Link href="/events" 
+						:class="{ active:  $page.props.currentRoute == 'events'}"
+						class="menu--link" title="Events" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-calendar-days menu--icon"></i>
 							<span class="menu--label">Events</span>
 						</Link>
 					</li>
 
 
-					<li class="menu--item">
-						<Link href="/plans" class="menu--link" title="Payouts" data-bs-toggle="tooltip" data-bs-placement="right">
+					<li class="menu--item" >
+						<Link href="/plans" 
+						:class="{ active:  $page.props.currentRoute == 'plans'}"
+						class="menu--link" title="Payouts" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-credit-card menu--icon"></i>
 							<span class="menu--label">Plans</span>
 						</Link>
 					</li>
 					<li class="menu--item">
-						<a href="my_organisation_dashboard_reports.html" class="menu--link active" title="Reports" data-bs-toggle="tooltip" data-bs-placement="right">
+						<a href="my_organisation_dashboard_reports.html" 
+						:class="{ active:  $page.props.currentRoute == 'invoices'}"
+						class="menu--link" title="Reports" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-chart-pie menu--icon"></i>
 							<span class="menu--label">Invoices</span>
 						</a>
 					</li>
 					<li class="menu--item">
-						<Link href="/subscriptions" class="menu--link" title="Subscription" data-bs-toggle="tooltip" data-bs-placement="right">
+						<Link href="/subscriptions" 
+						class="menu--link" 
+						:class="{ active:  $page.props.currentRoute == 'subscriptions'}"
+						title="Subscription" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-bahai menu--icon"></i>
 							<span class="menu--label">Subscription</span>
 						</Link>

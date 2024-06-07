@@ -1708,7 +1708,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     /* background: #96B6F5 url(../images/sign_bg.jpg); */
-    background: #045CC7 url(../js/images/sign_bg.jpg);
+    background: #045cc7 url(../js/images/sign_bg.jpg);
     width: 500px;
     padding: 50px;
 }
@@ -1762,7 +1762,7 @@ body {
 
 .sidebar-register-link {
     margin-left: 5px;
-    color: #045CC7;
+    color: #045cc7;
     font-weight: 500;
 }
 
@@ -1772,7 +1772,7 @@ body {
 
 .signup-link {
     margin-left: 5px;
-    color: #045CC7;
+    color: #045cc7;
     font-weight: 500;
 }
 
@@ -3370,7 +3370,7 @@ body {
 .d-main-title h3 {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     color: #000;
 }
 

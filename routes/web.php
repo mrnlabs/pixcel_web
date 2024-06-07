@@ -37,9 +37,11 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/events', [EventController::class, 'index'])->name('events');
-    Route::get('/create-event', function () {return Inertia::render('Events/CreateEvent');});
+    Route::get('/create-event', [EventController::class, 'create'])->name('create_event');
     Route::post('/create-event', [EventController::class, 'store']);
     Route::get('/event/{id}', [EventController::class, 'show'])->name('event');
+    Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('delete_event');
+    Route::post('/duplicate-event/{id}', [EventController::class, 'duplicate'])->name('duplicate_event');
 
     //event gallery
     Route::get('/event-gallery/{id}', [EventController::class, 'gallery'])->name('event-gallery');

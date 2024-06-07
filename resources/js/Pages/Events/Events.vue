@@ -1,34 +1,77 @@
 <script setup>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import { Head, Link } from "@inertiajs/vue3";
+import { Head, Link, router } from "@inertiajs/vue3";
 import SideNavbar from '@/Components/SideNavbar.vue';
+import Breadcrumb from '@/Components/Breadcrumb.vue';
+import moment from 'moment';
+import useToaster from '../../composables/useToaster';
+
+const { toastifySuccess, toastifyError } = useToaster();
 
 const props = defineProps({
-    events: Array
+    events: Array,
+	success: String,
+	error: String
 })
+
+const formatDate = (date) => {
+	if(!date){
+		return '';
+	}
+	return moment(date).format('DD-MM-YYYY');
+}
+
+const deleteEvent = (event) => {
+	if (confirm(`Are you sure you want to delete ${event.name} event?`)) {
+		router.delete(`/event/${event.id}`, {
+			preserveScroll: true,
+			onSuccess: () => {
+				if(props.success){
+                   toastifySuccess(props.success)
+				}else if(props.error){
+				   toastifyError(props.error)
+				}
+			},
+			onError: () => {
+				toast.error('Something went wrong!');
+			}
+		});
+	}
+}
+
+const duplicateEvent = (event) => {
+	if (confirm(`Are you sure you want to duplicate ${event.name} event?`)) {
+		router.post(`/duplicate-event/${event.id}`, {
+			preserveScroll: true,
+			onSuccess: () => {
+				if(props.success){
+                   toastifySuccess(props.success)
+				}else if(props.error){
+				   toastifyError(props.error)
+				}
+			},
+		});
+	}
+}
 </script>
 
 <template>
     <Head title="All Events" />
     <AuthenticatedLayout>
         <!-- Left Sidebar Start -->
-		<SideNavbar class="side"/>	<!-- Left Sidebar End -->
+			<!-- Left Sidebar End -->
 	<!-- Body Start -->
 	<div class="wrapper wrapper-body">
 		<div class="dashboard-body">
 			<div class="container-fluid">
 				<div class="row">
+					<Breadcrumb title="My Events" icon="fa-chart-pie"/>
 					<div class="col-md-12">
-						<div class="d-main-title">
-							<h3><i class="fa-solid fa-chart-pie me-3"></i>Events</h3>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="main-card mt-5">
+						<div class="main-card">
 							<div class="dashboard-wrap-content p-4">
 
 								<div class="d-md-flex flex-wrap align-items-center">
-									<div class="dashboard-date-wrap mt-4">
+									<div class="dashboard-date-wrap">
 										<div class="form-group">
 											<div class="relative-input position-relative">
 												<input class="form-control h_40" type="text" placeholder="Search by name" value="">
@@ -52,33 +95,46 @@ const props = defineProps({
 													<thead class="thead-dark">
 														<tr>
 															<th scope="col">NR.</th>
-															<th scope="col">Name</th>
-															<th scope="col">Created</th>
-															<th scope="col">Status</th>
-															<th scope="col">Expires</th>
-															<th scope="col">QR Code</th>
-															<th scope="col">Gallery</th>
-                                                            <th scope="col">Data</th>
-                                                            <th scope="col">Overlays</th>
-                                                            <th scope="col">Manage</th>
+															<th scope="col">NAME</th>
+															<th scope="col">CREATED</th>
+															<th scope="col">STATUS</th>
+															<th scope="col">EXPIRES</th>
+															<th scope="col" class="w-10">QR CODE</th>
+															<th scope="col" class="w-10">GALLERY</th>
+                                                            <th scope="col" class="w-10">DATA</th>
+                                                            <th scope="col" class="w-10">OVERLAYS</th>
+                                                            <th scope="col" class="w-10">MANAGE</th>
 														</tr>
 													</thead>
 													<tbody>
 														<tr v-for="event in events" :key="event.id">
 															<td>{{ event.id }}</td>
 															<td>{{ event.name }}</td>
-															<td><a href="#" target="_blank">{{ event.created_at }}</a></td>
+															<td><a href="#" target="_blank">{{ formatDate(event.created_at) }}</a></td>
 															<td>Pending</td>
 															<td>{{ event.expires_at }}</td>
                                                             <td><i class="fa-solid fa-qrcode" data-bs-toggle="modal" data-bs-target="#qrModal"></i></td>
                                                             <td>
-                                                                <Link :href="`/event-gallery/${event.id}`" class="pe-4 w-100 ps-4 text-center co-main-btn h_40 d-inline-block">
-                                                                    <i class="fa-solid fa-qrcode"></i>
+																<!-- co-main-btn -->
+                                                                <Link :href="`/event-gallery/${event.id}`" class="pe-4 w-100 ps-4 text-center h_40 d-inline-block">
+                                                                    <i class="fa-solid fa-th"></i>
                                                                 </Link>
                                                             </td>
-                                                            <td><i class="fa-solid fa-qrcode"></i></td>
-                                                            <td><i class="fa-solid fa-qrcode"></i></td>
-                                                            <td><i class="fa-solid fa-qrcode"></i></td>
+                                                            <td class="w-10"><i class="fa-solid fa-table"></i></td>
+                                                            <td class="w-10"><i class="fa-solid fa-images"></i></td>
+                                                            <td class="w-10">
+																<div class="dropdown">
+  <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	<i class="fa-solid fa-cog"></i>
+  </a>
+
+  <ul class="dropdown-menu ">
+    <li class="cursor-pointer"><Link :href="`/create-event?id=${event.id}`"  class="dropdown-item " ><i class="fa-solid fa-pencil"></i> Edit</Link></li>
+    <li class="cursor-pointer"><a @click="duplicateEvent(event)" class="dropdown-item" ><i class="fa-solid fa-copy"></i> Duplicate</a></li>
+    <li class="cursor-pointer"><a @click="deleteEvent(event)" class=" cursor-pointer dropdown-item"><i class="fa-solid fa-trash-alt text-danger"></i> Delete</a></li>
+  </ul>
+</div>
+															</td>
 														</tr>
 
 													</tbody>
@@ -125,5 +181,10 @@ const props = defineProps({
 	<!-- Body End -->
 	</AuthenticatedLayout>
 </template>
+<style scoped>
+.w-10{
+	width: 7% !important;
+}
+</style>
 
 

@@ -1,102 +1,99 @@
-<script >
+<script setup>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import {Head} from "@inertiajs/vue3";
+import {Head,useForm} from "@inertiajs/vue3";
+import Breadcrumb from "@/Components/Breadcrumb.vue";
 
-export default {
-    data() {
-        return {
-            form: {
-                name: '',
-                language: '',
-                country: '',
-                count_down: '',
-                beep_sound: '',
-                mirror_overlay: '',
-                front_rear_camera: '',
-                camera_exposure: '',
-                qr_app_protection: '',
-                motion_trigger : '',
-                front_or_rear_camera : '',
-                camera_exposure_menu_item : '',
-                boomerang : '',
-                videos : '',
-                slomo : '',
-                boomerang_repeats : '',
-                boomerang_speed : '',
-                boomerang_bounce : '',
-                duration : '',
-                gif_number_of_photos : '',
-                gif_frame_duration : '',
-                video_maximum_duration : '',
-                slomo_recording_time : '',
-                slomo_boomerang : '',
-                speed : '',
-                add_audio_file : '',
-                time_outs : '',
-                editing : '',
-                sharing: '',
-                thanks_message : '',
-                props : '',
+const props = defineProps({
+    e_vent: Object,
+    errors: Object,
+    success: String,
+    error: String
+})
+
+            const form = useForm({
+                id: props.e_vent?.id ? props.e_vent.id : '',
+                name: props.e_vent?.name ? props.e_vent.name : '',
+                language: props.e_vent?.language ? props.e_vent.language : '',
+                country: props.e_vent?.country ? props.e_vent.country : '',
+                count_down: props.e_vent?.count_down ? props.e_vent.count_down : '',
+                beep_sound: props.e_vent?.beep_sound ? props.e_vent.beep_sound : '',
+                mirror_overlay: props.e_vent?.mirror_overlay ? props.e_vent.mirror_overlay : '',
+                front_rear_camera: props.e_vent?.front_rear_camera ? props.e_vent.front_rear_camera : '',
+                camera_exposure: props.e_vent?.camera_exposure ? props.e_vent.camera_exposure : '',
+                qr_app_protection: props.e_vent?.qr_app_protection ? props.e_vent.qr_app_protection : '',
+                motion_trigger : props.e_vent?.motion_trigger ? props.e_vent.motion_trigger : '',
+                front_or_rear_camera : props.e_vent?.front_or_rear_camera ? props.e_vent.front_or_rear_camera : '',
+                camera_exposure_menu_item : props.e_vent?.camera_exposure_menu_item ? props.e_vent.camera_exposure_menu_item : '',
+                boomerang : props.e_vent?.boomerang ? props.e_vent.boomerang : '',
+                videos : props.e_vent?.videos ? props.e_vent.videos : '',
+                slomo : props.e_vent?.slomo ? props.e_vent.slomo : '',
+                boomerang_repeats : props.e_vent?.boomerang_repeats ? props.e_vent.boomerang_repeats : '',
+                boomerang_speed : props.e_vent?.boomerang_speed ? props.e_vent.boomerang_speed : '',
+                boomerang_bounce : props.e_vent?.boomerang_bounce ? props.e_vent.boomerang_bounce : '',
+                duration : props.e_vent?.duration ? props.e_vent.duration : '',
+                gif_number_of_photos : props.e_vent?.gif_number_of_photos ? props.e_vent.gif_number_of_photos : '',
+                gif_frame_duration : props.e_vent?.gif_frame_duration ? props.e_vent.gif_frame_duration : '',
+                video_maximum_duration : props.e_vent?.video_maximum_duration ? props.e_vent.video_maximum_duration : '',
+                slomo_recording_time : props.e_vent?.slomo_recording_time ? props.e_vent.slomo_recording_time : '',
+                slomo_boomerang : props.e_vent?.slomo_boomerang ? props.e_vent.slomo_boomerang : '',
+                speed : props.e_vent?.speed ? props.e_vent.speed : '',
+                add_audio_file : props.e_vent?.add_audio_file ? props.e_vent.add_audio_file : '',
+                time_outs : props.e_vent?.time_outs ? props.e_vent.time_outs : '',
+                editing : props.e_vent?.editing ? props.e_vent.editing : '',
+                sharing: props.e_vent?.sharing ? props.e_vent.sharing : '',
+                thanks_message : props.e_vent?.thanks_message ? props.e_vent.thanks_message : '',
+                props : props.e_vent?.props ? props.e_vent.props : '',
                 sharing_method : {
-                    email : '',
-                    sms : '',
-                    in_app : '',
-                    download: '',
-                    airdrop: '',
-                    qr:'',
-                    general:'',
-                    whatsapp: ''
+                    email : props.e_vent?.sharing_method?.email ? props.e_vent.sharing_method.email : '',
+                    sms : props.e_vent?.sharing_method?.sms ? props.e_vent.sharing_method.sms : '',
+                    in_app : props.e_vent?.sharing_method?.in_app ? props.e_vent.sharing_method.in_app : '',
+                    download: props.e_vent?.sharing_method?.download ? props.e_vent.sharing_method.download : '',
+                    airdrop: props.e_vent?.sharing_method?.airdrop ? props.e_vent.sharing_method.airdrop : '',
+                    qr: props.e_vent?.sharing_method?.qr ? props.e_vent.sharing_method.qr : '',
+                    general: props.e_vent?.sharing_method?.general ? props.e_vent.sharing_method.general : '',
+                    whatsapp: props.e_vent?.sharing_method?.whatsapp ? props.e_vent.sharing_method.whatsapp : '',
                 },
-                edit_active : '',
-                in_app_active : '',
-                gallery : '',
-                email_subject : '',
-                text_email : '',
-                text_message : '',
-                webgallery_email_subject : '',
-                webgallery_email_message : '',
-                social_share_description : '',
+                edit_active : props.e_vent?.edit_active ? props.e_vent.edit_active : '',
+                in_app_active : props.e_vent?.in_app_active ? props.e_vent.in_app_active : '',
+                gallery : props.e_vent?.gallery ? props.e_vent.gallery : '',
+                email_subject : props.e_vent?.email_subject ? props.e_vent.email_subject : '',
+                text_email : props.e_vent?.text_email ? props.e_vent.text_email : '',
+                text_message : props.e_vent?.text_message ? props.e_vent.text_message : '',
+                webgallery_email_subject : props.e_vent?.webgallery_email_subject ? props.e_vent.webgallery_email_subject : '',
+                webgallery_email_message : props.e_vent?.webgallery_email_message ? props.e_vent.webgallery_email_message : '',
+                social_share_description : props.e_vent?.social_share_description ? props.e_vent.social_share_description : '',
 
-            }
-        }
-    },
-    methods: {
-
-        handleFileUpload(event) {
+            })
+      
+    
+  
+        function handleFileUpload(event) {
             const file = event.target.files[0];
-            this.form.add_audio_file = file;
-        },
-        submit() {
-            console.log(this.form);
-            this.$inertia.post('/create-event', this.form)
+            form.add_audio_file = file;
         }
-    },
-    components: {
-        AuthenticatedLayout,
-        Head
-    }
-}
+
+       function submit() {
+            console.log(form);
+            form.post('/create-event')
+        }
+
 </script>
 <template>
-    <Head title="All Events" />
+    <Head title="Create Event" />
     <AuthenticatedLayout>
         <div class="wrapper wrapper-body">
             <div class="dashboard-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="d-main-title">
-                                <h3><i class="fa-solid fa-chart-pie me-3"></i>Create Event</h3>
-                            </div>
-                        </div>
+                        <Breadcrumb :title="e_vent?.id ? e_vent.name : 'Event'" icon="fa-calendar-days"/>
                         <div class="col-md-12">
                             <div class="main-card mt-5">
-                                <div class="dashboard-wrap-content p-4">
+                                <div class="dashboard-wrap-content ">
                                     <div class="model-content main-form">
                                         <div class="row">
                                             <form @submit.prevent="submit">
                                             <div class="col-lg-12 col-md-12">
-                                                <div class="main-card p-4 mt-4">
+                                                <div class="main-card p-4">
                                                     <div class="d-flex align-items-center justify-content-between price-variation-head">
                                                         <h5 class="m-0 color-black fs-16">
                                                             General Settings</h5>
@@ -651,7 +648,7 @@ export default {
 
                                                     </div>
                                                     <div class="btn-submit">
-                                                        <button class="main-btn btn-hover h_50 w-100" type="submit">Submit</button>
+                                                        <button class="main-btn btn-hover h_50 w-100" type="submit">{{ form.id ? 'Update' : 'Create' }}</button>
                                                     </div>
                                                 </div>
                                             </form>

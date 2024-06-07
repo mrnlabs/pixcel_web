@@ -6,6 +6,7 @@ use App\Http\Requests\CreateEventRequest;
 use App\Http\Requests\CreateSharingSettingsRequest;
 use App\Http\Requests\CreateVideoSettingsRequest;
 use App\Http\Requests\UpdateEventRequest;
+use App\Models\Event;
 use App\Services\EventService;
 use App\Services\SharingSettingsService;
 use App\Services\VideoSettingsService;
@@ -41,7 +42,14 @@ class EventController extends Controller
 
     }
 
-
+        public function duplicate($id){
+           try {
+            $this->eventService->duplicate($id);
+            return back()->with('success', 'Event duplicated successfully');
+           } catch (\Throwable $th) {
+             return back()->with('error', 'Error duplicating event');
+           }
+        }
 
     /**
      * Store a newly created resource in storage.
@@ -67,11 +75,11 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function create()
     {
         try{
-            $event =  $this->eventService->getEvent($id);
-            return Inertia::render('Event/Show', ['event' => $event]);
+            $event =  $this->eventService->getEvent(request('id'));
+            return Inertia::render('Events/CreateEvent', ['e_vent' => $event]);
         } catch (\Exception $e){
             return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
@@ -105,9 +113,10 @@ class EventController extends Controller
     {
         try{
             $this->eventService->deleteEvent($id);
-            return redirect()->route('event.index');
+            return back()->with('success', 'Event deleted successfully');
         } catch (\Exception $e){
-            return Inertia::render('Error', ['message' => $e->getMessage()]);
+            return back()->with('error', 'Error deleting event');
+            //return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
     }
 

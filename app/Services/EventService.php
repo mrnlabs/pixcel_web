@@ -17,7 +17,7 @@ class EventService
     }
 
     public function createEvent(array $data)
-    {
+    {dd($data);
 //        add user id
         $data['user_id'] = auth()->user()->id;
         Event::create($data);
@@ -30,6 +30,10 @@ class EventService
         return "Event updated successfully!";
     }
 
+    function duplicate($id) {
+        $event = Event::find($id);
+       return $event->replicate()->save();
+    }
     public function deleteEvent($eventId)
     {
         // Find the event
