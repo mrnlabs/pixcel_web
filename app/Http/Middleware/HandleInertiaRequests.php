@@ -24,6 +24,8 @@ class HandleInertiaRequests extends Middleware
         return parent::version($request);
     }
 
+ 
+
     /**
      * Define the props that are shared by default.
      *
@@ -39,6 +41,7 @@ class HandleInertiaRequests extends Middleware
             'currentRoute' => Route::currentRouteName(),
             'success' => fn () => $request->session()->get('success'),
             'error' => fn () => $request->session()->get('error'),
+            'file_path' => fn () => env('BLOB_FILE_PATH'),
             'ziggy' => fn () => [
                 ...(new Ziggy)->toArray(),
                 'location' => $request->url(),

@@ -14,4 +14,17 @@ class ProfileService
         return auth()->user();
     }
 
+    function updateProfilePicture($path, $type) {
+        $db_column = '';
+        if($type == 'profile'){
+            $db_column = 'photo';
+        }else{
+            $db_column = 'cover_photo';
+        }
+        return User::where('id', auth()->id())->update([
+            $db_column => $path,
+        ]);
+
+    }
+
 }

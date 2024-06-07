@@ -56,7 +56,14 @@ class ProfileController extends Controller
      */
     public function updatePicture(Request $request, string $type)
     {
-        dd($request);
+        //store file and save url
+       try {
+        $path = $request->file('image')->storeAs('/avatars', $request->file('image')->getClientOriginalName(), 'public');
+        $this->profileService->updateProfilePicture($path, $type);
+        return back()->with('success', 'Profile picture updated successfully!');
+       } catch (\Throwable $th) {
+        throw $th;
+       }
     }
 
     /**

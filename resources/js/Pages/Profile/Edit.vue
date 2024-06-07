@@ -9,7 +9,7 @@
     
 
    const { toastifySuccess, toastifyError } = useToaster();
-   let file = imageProfile;
+   let file =  imageProfile;
   const props = defineProps({
     profile: Object,
     isMyProfile: Boolean,
@@ -54,10 +54,11 @@
   let showSaveBtn = ref(false);
   
   const onFileChange = (event) => {
+    props.profile.photo = null;
     let myFile = event.target.files[0];
     if (myFile) {
         file = URL.createObjectURL(myFile);
-        fileUploadForm.image = event.target.files;
+        fileUploadForm.image = event.target.files[0];
         showSaveBtn.value = true;
       }
   }
@@ -107,7 +108,7 @@
                 <div class="col-xl-4 col-lg-5 col-md-12">
                   <div class="main-card user-left-dt">
                     <div class="user-avatar-img">
-                      <img :src="file" alt="">
+                      <img :src="profile?.photo ? `${$page.props.file_path}/${profile?.photo}` : file" alt="">
                       <div class="avatar-img-btn">
                         <input @change="onFileChange" type="file" id="avatar-img">
                         <label for="avatar-img">
@@ -117,7 +118,7 @@
                       
                     </div>
                     <div class="user-dts">
-                        <button v-if="showSaveBtn" type="button" @click="updatePicture" class="btn btn-success btn-xs">Save</button>
+                        <button v-if="showSaveBtn" type="button" @click="updatePicture('profile')" class="btn btn-success btn-xs">Save</button>
                       <h4 class="user-name">{{ profile.firstname }} {{ profile.lastname }}
                         <span class="verify-badge">
                           <i class="fa-solid fa-circle-check"></i>
