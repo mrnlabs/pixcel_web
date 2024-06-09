@@ -1,13 +1,10 @@
 <script setup>
-import Checkbox from '@/Components/Checkbox.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import Button from '@/Components/Button.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
-
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import { ref, computed } from 'vue';
 
 defineProps({
   canResetPassword: {
@@ -34,6 +31,17 @@ const submit = () => {
     onFinish: () => form.reset('password'),
   });
 };
+
+const password = ref('');
+    const showPassword = ref(false);
+
+    const passwordFieldType = computed(() => (showPassword.value ? 'text' : 'password'));
+    const toggleIconClass = computed(() => (showPassword.value ? 'fas fa-eye-slash' : 'fas fa-eye'));
+
+    const togglePasswordVisibility = () => {
+      showPassword.value = !showPassword.value;
+    };
+
 </script>
 
 <template>
@@ -85,22 +93,29 @@ const submit = () => {
 
                       <div class="field-password">
                         <InputLabel label="Password*" />
-                        <a class="forgot-pass-link" href="forgot_password.html">Forgot Password?</a>
+                        <a class="forgot-pass-link" href="#">Forgot Password?</a>
                       </div>
 
 
                       <div class="loc-group position-relative">
 
-                        <TextInput v-model="form.password" type="password" :isRequired="true" class="form-control h_50"
+                        <TextInput 
+                        :type="passwordFieldType" id="password"
+                        v-model="form.password"
+                        type="password" 
+                        :isRequired="true" class="form-control h_50"
                           placeholder="Enter your password" />
 
-                        <span class="pass-show-eye"><i class="fas fa-eye-slash"></i></span>
+                        <span class="pass-show-eye">
+                          <i @click="togglePasswordVisibility" :class="toggleIconClass"></i>
+                        </span>
                         <div v-if="errors.password" class="text-danger">{{ errors.password }}</div>
                       </div>
                     </div>
 
-                    <Button type="submit" label="Sign In" class="main-btn btn-hover w-100 mt-4"
-                      :isDisabled="form.processing" :hasIcon=true icon="fas fa-sign-in-alt ms-2" />
+                    <Button type="submit" :label="form.processing ? 'Loading...' : 'Sign In'" class="main-btn btn-hover w-100 mt-4"
+                      :isDisabled="form.processing" 
+                      :hasIcon="form.processing ? false : true" icon="fas fa-sign-in-alt ms-2" />
                     <!-- <button class="main-btn btn-hover w-100 mt-4" type="submit">Sign In
 					<i class="fas fa-sign-in-alt ms-2"></i>
 				</button> -->

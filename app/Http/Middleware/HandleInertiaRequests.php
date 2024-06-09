@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Middleware;
 use Tighten\Ziggy\Ziggy;
 use Illuminate\Support\Facades\Route;
@@ -41,7 +42,7 @@ class HandleInertiaRequests extends Middleware
             'currentRoute' => Route::currentRouteName(),
             'success' => fn () => $request->session()->get('success'),
             'error' => fn () => $request->session()->get('error'),
-            'file_path' => fn () => env('BLOB_FILE_PATH'),
+            'photo' => fn () => Auth()->check() ? env('BLOB_FILE_PATH').$request->user()->photo : null,
             'ziggy' => fn () => [
                 ...(new Ziggy)->toArray(),
                 'location' => $request->url(),

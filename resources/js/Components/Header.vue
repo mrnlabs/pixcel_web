@@ -1,9 +1,13 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Link,usePage } from '@inertiajs/vue3';
 import logo from '../images/apple-icon.png';
 import imageProfile from '../images/profile-imgs/img-13.jpg';
+import { computed } from 'vue'
 
+const page = usePage()
 
+const user = computed(() => page.props.auth.user);
+const file_path = computed(() => page.props.photo);
 
 </script>
 
@@ -115,7 +119,7 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 							<li class="dropdown account-dropdown">
 								<a href="#" class="account-link" role="button" id="accountClick"
 									data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
-									<img :src="imageProfile" alt="">
+									<img :src="user.photo ? file_path : imageProfile" alt="">
 									<i class="fas fa-caret-down arrow-icon"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-account dropdown-menu-end"
@@ -123,15 +127,15 @@ import imageProfile from '../images/profile-imgs/img-13.jpg';
 									<li>
 										<div class="dropdown-account-header">
 											<div class="account-holder-avatar">
-												<img :src="imageProfile" alt="">
+												<img :src="user.photo ? file_path : imageProfile" alt="">
 											</div>
-											<h5>John Doe</h5>
-											<p>johndoe@example.com</p>
+											<h5>{{ user?.firstname + ' ' + user?.lastname}}</h5>
+											<p>{{ user?.email}}</p>
 										</div>
 									</li>
 									<li class="profile-link">
 										<Link href="/profile" class="link-item">My Profile</Link>
-										<a Link href="/logout" class="link-item">Sign Out</a>
+										<Link href="/logout" class="link-item">Sign Out</Link>
 									</li>
 								</ul>
 							</li>

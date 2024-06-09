@@ -58,11 +58,12 @@ console.log(props)
 						</a>
 					</li>
 
-					<li class="menu--item">
-						<a href="my_organisation_dashboard_my_team.html" class="menu--link team-lock" title="My Team" data-bs-toggle="tooltip" data-bs-placement="right">
-							<i class="fa-solid fa-user-group menu--icon"></i>
-							<span class="menu--label">My Team</span>
-						</a>
+					<li class="menu--item" >
+						<Link href="/profile" :class="{ active:  $page.props.currentRoute == 'profile'}"
+						class="menu--link team-lock" title="My Profile" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-user menu--icon"></i>
+							<span class="menu--label">My Profile</span>
+						</Link>
 					</li>
 				</ul>
 			</div>
