@@ -21,5 +21,6 @@
     </head>
     <body class="d-flex flex-column h-100">
         @inertia
+     <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-webcomponent@2/dist/tinymce-webcomponent.min.js"></script>
     </body>
 </html>

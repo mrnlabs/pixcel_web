@@ -6830,3 +6830,7 @@ ol {
     display: inline-block;
     font-size: large;
 }
+
+.cursor-pointer{
+    cursor: pointer !important;
+}

@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PricingController;
 
 
 /*
@@ -58,6 +59,9 @@ Route::middleware('auth')->group(function () {
 
     //plans
     Route::get('/plans', [PlanController::class, 'index'])->name('plans');
+    Route::post('/create-plan', [PlanController::class, 'store'])->name('create_plan');
+
+    Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 });
 
 require __DIR__.'/auth.php';

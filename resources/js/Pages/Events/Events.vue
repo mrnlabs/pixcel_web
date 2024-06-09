@@ -1,7 +1,6 @@
 <script setup>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head, Link, router } from "@inertiajs/vue3";
-import SideNavbar from '@/Components/SideNavbar.vue';
 import Breadcrumb from '@/Components/Breadcrumb.vue';
 import moment from 'moment';
 import useToaster from '../../composables/useToaster';

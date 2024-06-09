@@ -27,9 +27,18 @@ console.log(props)
 
 
 					<li class="menu--item" >
+						<Link href="/pricing" 
+						:class="{ active:  $page.props.currentRoute == 'pricing'}"
+						class="menu--link" title="Pricing" data-bs-toggle="tooltip" data-bs-placement="right">
+							<i class="fa-solid fa-credit-card menu--icon"></i>
+							<span class="menu--label">Pricing</span>
+						</Link>
+					</li>
+
+					<li class="menu--item" >
 						<Link href="/plans" 
 						:class="{ active:  $page.props.currentRoute == 'plans'}"
-						class="menu--link" title="Payouts" data-bs-toggle="tooltip" data-bs-placement="right">
+						class="menu--link" title="Plans" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-credit-card menu--icon"></i>
 							<span class="menu--label">Plans</span>
 						</Link>
