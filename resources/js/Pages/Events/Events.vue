@@ -119,7 +119,7 @@ const duplicateEvent = (event) => {
                                                             <td class="w-10"><i class="fa-solid fa-table"></i></td>
                                                             <td class="w-10"><i class="fa-solid fa-images"></i></td>
                                                             <td class="w-10">
-																<div class="dropdown">
+																<!-- <div class="dropdown">
   <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 	<i class="fa-solid fa-cog"></i>
   </a>
@@ -129,7 +129,21 @@ const duplicateEvent = (event) => {
     <li class="cursor-pointer"><a @click="duplicateEvent(event)" class="dropdown-item" ><i class="fa-solid fa-copy"></i> Duplicate</a></li>
     <li class="cursor-pointer"><a @click="deleteEvent(event)" class=" cursor-pointer dropdown-item"><i class="fa-solid fa-trash-alt text-danger"></i> Delete</a></li>
   </ul>
+</div> -->
+
+<div class="d-flex align-items-center">
+	<div class="dropdown dropdown-default dropdown-text dropdown-icon-item">
+		<button class="option-btn-1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<i class="fa-solid fa-ellipsis-vertical"></i>
+		</button>
+		<div class="dropdown-menu dropdown-menu-right">
+			<a @click="duplicateEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-regular fa-copy me-3"></i>Duplicate</a>
+			<Link :href="`/create-event?id=${event.id}`" class="dropdown-item"><i class="fa-solid fa-pen me-3"></i>Edit</Link>
+			<a @click="deleteEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-solid fa-trash-can me-3"></i>Delete</a>
+		</div>
+	</div>
 </div>
+
 															</td>
 														</tr>
 

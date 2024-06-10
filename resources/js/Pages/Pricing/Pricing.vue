@@ -1,7 +1,12 @@
 <script setup>
+import { Link,router } from '@inertiajs/vue3';
+
 const props = defineProps({
-    plans: Array
+    plans: Array,
+	success: String,
+	error: String
 })
+
 const truncateText = (text, limit) => {
     if (text.length > limit) {
         return text.substring(0, limit) + '...';
@@ -9,6 +14,17 @@ const truncateText = (text, limit) => {
         return text
     }
 }
+
+const addToCart = (plan) => {
+	let planInStorage = localStorage.getItem('pixcel');
+	if(planInStorage){
+		localStorage.removeItem('pixcel');
+	}
+	localStorage.setItem('pixcel', JSON.stringify(plan.id));
+	router.get(`/add-to-cart?id=${plan.id}`);
+}
+
+
 
 </script>
 <template>
@@ -23,21 +39,21 @@ const truncateText = (text, limit) => {
 				<div class="pricing_design">
 					<div class="single-pricing">
 						<div class="price-head">		
-							<h2>{{  plan.title  }}</h2>
+							<h2 class="price-title">{{  plan.title  }}</h2>
 							<h1>R {{  plan.amount }}</h1>
-							<span>/Monthly</span>
 						</div>
 						<p v-html="truncateText(plan.description,450)"></p>
 						<div class="pricing-price">
 							
 						</div>
-						<a href="#" class="price_btn">Order Now</a>
+						<Link @click="addToCart(plan)"  class="price_btn cursor-pointer">Add To Cart</Link>
 					</div>
 				</div>
 			</div>		  
-		</div><!--- END ROW -->
-	</div><!--- END CONTAINER -->
+		</div>
+	</div>
 </section>
+				
 </template>
 <style>
 .pricing-content{position:relative;}
@@ -65,7 +81,7 @@ const truncateText = (text, limit) => {
     right: 0;
     z-index: -1;
 }
-.price-head{}
+
 .price-head h2 {
 	margin-bottom: 20px;
 	font-size: 26px;
@@ -76,7 +92,7 @@ const truncateText = (text, limit) => {
 	margin-top: 30px;
 	margin-bottom: 5px;
 }
-.price-head span{}
+
 
 .single-pricing ul{list-style:none;margin-top: 30px;}
 .single-pricing ul li {
@@ -93,7 +109,7 @@ const truncateText = (text, limit) => {
 	line-height: 20px;
 	margin-right: 6px;
 }
-.pricing-price{}
+
 
 .price_btn {
 	background: #005DC8;
@@ -105,11 +121,15 @@ const truncateText = (text, limit) => {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
-.price_btn:hover{background:#0aa1d6;}
+
 a{
 text-decoration:none;    
 }
 
 .section-title {
     margin-bottom: 60px;
-}</style>
+}
+.price-title {
+	font-size: 22px;
+}
+</style>

@@ -33,6 +33,10 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        //login from cart page
+        if($request->has('redirectTo')){
+            return back()->with('loginSuccess', 'Login Successful');
+        }
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }

@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Controllers\PlanController;
-use App\Http\Controllers\SubscriptionController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PricingController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\SubscriptionController;
 
 
 /*
@@ -60,8 +61,13 @@ Route::middleware('auth')->group(function () {
     //plans
     Route::get('/plans', [PlanController::class, 'index'])->name('plans');
     Route::post('/create-plan', [PlanController::class, 'store'])->name('create_plan');
+});
+
 
     Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
-});
+    Route::get('/add-to-cart', [PricingController::class, 'addToCart'])->name('addToCart');
+
+    Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
+
 
 require __DIR__.'/auth.php';

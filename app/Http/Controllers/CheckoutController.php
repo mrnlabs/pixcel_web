@@ -8,21 +8,19 @@ use App\Services\CartService;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class PricingController extends Controller
+class CheckoutController extends Controller
 {
     public CartService $cartservice;
     public function __construct(CartService $cartservice ) {
         $this->cartservice = $cartservice;
     }
 
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+  
+    public function checkout()
     {
         try{
             $plans = Plan::latest()->get();
-           return Inertia::render('Pricing/Pricing', ['plans' => $plans]);
+           return Inertia::render('Checkout/Checkout', ['plans' => $plans]);
         } catch(\Exception $e){
             return Inertia::render('Error', ['message' => $e->getMessage()]);
         }

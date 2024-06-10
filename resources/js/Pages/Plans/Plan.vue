@@ -126,7 +126,6 @@ const editPlan = (plan) => {
 </template>
 <style>
 .event-month {
-    padding: 1px 0;
     text-transform: lowercase;
 }
     </style>

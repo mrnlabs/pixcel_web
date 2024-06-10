@@ -41,7 +41,7 @@ const submit = () => {
 }
 </script>
 <template>
-     <div  class="modal fade" id="create-plan" tabindex="-1" aria-labelledby="bankModalLabel" aria-hidden="false">
+     <div  class="modal modal-lg fade" id="create-plan" tabindex="-1" aria-labelledby="bankModalLabel" aria-hidden="false">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
