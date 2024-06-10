@@ -16,11 +16,12 @@ class CheckoutController extends Controller
     }
 
   
-    public function checkout()
+    public function checkout(Request $request)
     {
+        $request->validate(['id' => 'required|exists:plans,id']);
         try{
-            $plans = Plan::latest()->get();
-           return Inertia::render('Checkout/Checkout', ['plans' => $plans]);
+            $cart = Plan::find($request->id);
+           return Inertia::render('Checkout/Checkout', ['cart' => $cart]);
         } catch(\Exception $e){
             return Inertia::render('Error', ['message' => $e->getMessage()]);
         }

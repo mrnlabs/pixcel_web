@@ -4,6 +4,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\PayfastController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CheckoutController;
@@ -68,6 +69,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/add-to-cart', [PricingController::class, 'addToCart'])->name('addToCart');
 
     Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
+
+    Route::post('/place-order', [PayfastController::class, 'initiate'])->name('initiate');
+    Route::get('/return', [PayfastController::class, 'return'])->name('return');
+    Route::get('/cancel', [PayfastController::class, 'cancel'])->name('cancel');
+    Route::get('/notify', [PayfastController::class, 'notify'])->name('notify');
 
 
 require __DIR__.'/auth.php';
