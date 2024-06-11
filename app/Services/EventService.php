@@ -17,7 +17,7 @@ class EventService
     }
 
     public function createEvent(array $data)
-    {dd($data);
+    {
 //        add user id
         $data['user_id'] = auth()->user()->id;
         Event::create($data);

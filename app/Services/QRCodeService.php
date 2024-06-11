@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Models\Event;
+use Illuminate\Support\Facades\Storage;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class QRCodeService

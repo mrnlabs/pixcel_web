@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateEventRequest;
-use App\Http\Requests\CreateSharingSettingsRequest;
-use App\Http\Requests\CreateVideoSettingsRequest;
-use App\Http\Requests\UpdateEventRequest;
-use App\Models\Event;
-use App\Services\EventService;
-use App\Services\SharingSettingsService;
-use App\Services\VideoSettingsService;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Event;
+use Illuminate\Http\Request;
+use App\Services\EventService;
+use App\Services\VideoSettingsService;
+use App\Services\SharingSettingsService;
+use App\Http\Requests\CreateEventRequest;
+use App\Http\Requests\UpdateEventRequest;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Http\Requests\CreateVideoSettingsRequest;
+use App\Http\Requests\CreateSharingSettingsRequest;
 
 class EventController extends Controller
 {
@@ -33,11 +34,14 @@ class EventController extends Controller
     public function index()
     {
         try{
-           $events =  $this->eventService->getEvents();
 
-            return Inertia::render('Events/Events', ['events' => $events]);
+           
+          $qrCode= QrCode::size(150)->generate('https://pixcel360.com/');
+    
+           $events =  $this->eventService->getEvents();
+            return Inertia::render('Events/Events', ['events' => $events, 'qrCode' => '<div>'.$qrCode.'</div>']);
         } catch (\Exception $e){
-            return Inertia::render('Error', ['message' => $e->getMessage()]);
+            //return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
 
     }
@@ -68,7 +72,8 @@ class EventController extends Controller
            // redirect to /events route
             return redirect()->route('events');
         } catch (\Exception $e){
-            return Inertia::render('Error', ['message' => $e->getMessage()]);
+            throw $e;
+            //return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
     }
 

@@ -9,7 +9,7 @@ use App\Http\Controllers\PricingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\SubscriptionController;
-
+use App\Services\QRCodeService;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', function (){
         return Inertia::render('Events/Events');
     });
+
 
     Route::get('/events', [EventController::class, 'index'])->name('events');
     Route::get('/create-event', [EventController::class, 'create'])->name('create_event');
