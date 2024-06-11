@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Services\CartService;
 use App\Services\PayfastService;
 use App\Http\Requests\PlanRequest;
+use Illuminate\Support\Facades\Log;
 
 class PayfastController extends Controller
 {
@@ -29,13 +30,15 @@ class PayfastController extends Controller
     }
 
     function cancel() {
-        dd('cancel');
+        return Inertia::render('Checkout/PayfastCancel');
     }
     public function return(Request $request){
-        dd($request);
+        //dd('Return',$request);
+        return Inertia::render('Subscriptions/Subscription');
     }
-    public function notify(Request $request)
+    public function notify()
     {
+        Log::info('notify');
         //remember to validate request
         try{
             // $this->payfastService->notify();

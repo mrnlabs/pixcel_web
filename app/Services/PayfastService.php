@@ -39,7 +39,7 @@ class PayfastService
             {
                 $htmlForm .= '<input name="'.$name.'" type="hidden" value=\''.$value.'\' />';
             }
-            $htmlForm .= '<input type="submit" value="Pay Now" /></form>';
+            $htmlForm .= '<input type="submit" value="Pay Now" class="main-btn btn-hover h_50 w-100 mt-5 payfast-btn" /></form>';
             return $htmlForm; 
     }
 

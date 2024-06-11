@@ -36,7 +36,7 @@ use App\Http\Controllers\SubscriptionController;
 Route::middleware('auth')->group(function () {
 
     Route::get('/', function (){
-        return Inertia::render('events');
+        return Inertia::render('Events/Events');
     });
 
     Route::get('/events', [EventController::class, 'index'])->name('events');
@@ -73,7 +73,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/place-order', [PayfastController::class, 'initiate'])->name('initiate');
     Route::get('/return', [PayfastController::class, 'return'])->name('return');
     Route::get('/cancel', [PayfastController::class, 'cancel'])->name('cancel');
-    Route::get('/notify', [PayfastController::class, 'notify'])->name('notify');
+    Route::post('/notify', [PayfastController::class, 'notify'])->name('notify');
 
 
 require __DIR__.'/auth.php';
