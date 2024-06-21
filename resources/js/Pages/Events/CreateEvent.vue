@@ -464,7 +464,7 @@ function submit() {
 
                                                         <div
                                                             class="div-base-table border-0 mt-2 full-width small-table ticket-subtype-table">
-                                                            <div class="form-group border_bottom">
+                                                            <div class="w-50 form-group border_bottom">
                                                                 <div
                                                                     class="d-flex align-items-center flex-wrap pb-4 flex-nowrap">
                                                                     <h4 class="fs-14 mb-0 me-auto">Email</h4>
@@ -818,8 +818,8 @@ function submit() {
                                                         </div>
 
                                                     </div>
-                                                    <div class="btn-submit">
-                                                        <button class="main-btn btn-hover h_50 w-100" type="submit">{{
+                                                    <div class="btn-submit mt-4">
+                                                        <button class="main-btn btn-hover h_50 w-50" type="submit">{{
                                                             form.id ? 'Update' : 'Create' }}</button>
                                                     </div>
                                                 </div>
