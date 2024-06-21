@@ -816,12 +816,13 @@ function submit() {
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="btn-submit mt-4">
+                                                            <button class="main-btn btn-hover h_50 w-50"
+                                                                type="submit">{{
+                                                                    form.id ? 'Update' : 'Create' }}</button>
+                                                        </div>
+                                                    </div>
 
-                                                    </div>
-                                                    <div class="btn-submit mt-4">
-                                                        <button class="main-btn btn-hover h_50 w-50" type="submit">{{
-                                                            form.id ? 'Update' : 'Create' }}</button>
-                                                    </div>
                                                 </div>
                                             </form>
                                         </div>

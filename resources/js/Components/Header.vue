@@ -1,5 +1,5 @@
 <script setup>
-import { Link,usePage } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import logo from '../images/apple-icon.png';
 import imageProfile from '../images/profile-imgs/img-13.jpg';
 import { computed } from 'vue'
@@ -16,18 +16,18 @@ const file_path = computed(() => page.props.photo);
 		<div class="header-inner">
 			<nav
 				class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
-				<div class="container">
+				<div class="container-fluid pl-5">
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 						<span class="navbar-toggler-icon">
 							<i class="fa-solid fa-bars"></i>
 						</span>
 					</button>
-					<a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
+					<a class="navbar-brand ml-4 order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
 						<div class="res-main-logo">
 							<img :src="logo" alt="Main Logo">
 						</div>
-						<div class="main-logo" id="logo">
+						<div class="ml-4 main-logo" id="logo">
 							<img :src="logo" alt="Main Logo">
 
 						</div>
@@ -129,8 +129,8 @@ const file_path = computed(() => page.props.photo);
 											<div class="account-holder-avatar">
 												<img :src="user.photo ? file_path : imageProfile" alt="">
 											</div>
-											<h5>{{ user?.firstname + ' ' + user?.lastname}}</h5>
-											<p>{{ user?.email}}</p>
+											<h5>{{ user?.firstname + ' ' + user?.lastname }}</h5>
+											<p>{{ user?.email }}</p>
 										</div>
 									</li>
 									<li class="profile-link">
@@ -149,3 +149,9 @@ const file_path = computed(() => page.props.photo);
 
 
 </template>
+
+<style scoped>
+.navbar-brand {
+	margin-left: 6rem
+}
+</style>
