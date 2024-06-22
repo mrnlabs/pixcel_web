@@ -6840,3 +6840,7 @@ ol {
 .cursor-pointer {
     cursor: pointer !important;
 }
+
+.form-control {
+    border-radius: 4px !important;
+}
