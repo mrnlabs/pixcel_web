@@ -2060,6 +2060,15 @@ body {
     margin-left: 27px;
 }
 
+.fas:hover {
+    color: #1f62b4;
+}
+
+.pass-show-eye:hover {
+    color: #1f62b4;
+
+}
+
 .event-type-name {
     font-size: 16px;
     font-weight: normal;
