@@ -124,8 +124,8 @@ export default defineComponent({
                                                         <label class="form-label">Password*</label>
                                                     </div>
                                                     <div class="loc-group position-relative">
-                                                        <input class="form-control h_50" type="password" placeholder=""
-                                                            v-model="form.password">
+                                                        <input class="form-control h_50" :type="passwordFieldType"
+                                                            placeholder="" v-model="form.password">
                                                         <span class="pass-show-eye" @click="togglePasswordVisibility">
                                                             <i :class="togglePasswordIconClass"></i>
                                                         </span>
@@ -139,7 +139,8 @@ export default defineComponent({
                                                         <label class="form-label">Confirm Password*</label>
                                                     </div>
                                                     <div class="loc-group position-relative">
-                                                        <input class="form-control h_50" type="password" placeholder=""
+                                                        <input class="form-control h_50"
+                                                            :type="confirmPasswordFieldType" placeholder=""
                                                             v-model="form.password_confirmation">
                                                         <span class="pass-show-eye"
                                                             @click="toggleConfirmPasswordVisibility">
