@@ -50,7 +50,7 @@ const submit = () => {
                 </div>
                 <div class="modal-body">
                     <div class="model-content main-form">
-                        <div class="row">{{ viewPlan }}
+                        <div class="row">
                             <form @submit="submit">
                                 <div class="form-group">
                                     <label class="form-label">Title*</label>
@@ -101,13 +101,19 @@ const submit = () => {
     </div>
 </template>
 <style>
+.modal-content {
+    padding: 25px;
+}
+
 #plan-btn {
     border-radius: 4px;
+    color: #fff !important;
     background: #FF4338 !important;
+    border-color: #FF4338 !important;
 }
 
 #plan-btn:hover {
-    color: #000 !important;
+    color: #fff !important;
     background: #FF4338 !important;
     border: 0;
 }
