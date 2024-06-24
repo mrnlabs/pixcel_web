@@ -1,7 +1,7 @@
 <script>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import { Link } from '@inertiajs/vue3';
-import { defineComponent } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 
 export default defineComponent({
@@ -14,18 +14,41 @@ export default defineComponent({
                 phone: '',
                 password: '',
                 password_confirmation: '',
-            }
+            },
+            showPassword: false,
+            showConfirmPassword: false,
         }
     },
     methods: {
         submit() {
-
             this.$inertia.post('/register', this.form)
+        },
+        togglePasswordVisibility() {
+            this.showPassword = !this.showPassword;
+        },
+        toggleConfirmPasswordVisibility() {
+            this.showConfirmPassword = !this.showConfirmPassword;
+        }
+    },
+
+    computed: {
+        passwordFieldType() {
+            return this.showPassword ? 'text' : 'password';
+        },
+        confirmPasswordFieldType() {
+            return this.showConfirmPassword ? 'text' : 'password';
+        },
+        togglePasswordIconClass() {
+            return this.showPassword ? 'fas fa-eye-slash' : 'fas fa-eye';
+        },
+        toggleConfirmPasswordIconClass() {
+            return this.showConfirmPassword ? 'fas fa-eye-slash' : 'fas fa-eye';
         }
     },
     components: {
         ApplicationLogo,
-        Link, GuestLayout
+        Link,
+        GuestLayout
     }
 });
 
@@ -41,10 +64,6 @@ export default defineComponent({
                     <!-- <div class="sidebar-sign-logo">
                             <ApplicationLogo  />
                         </div> -->
-                    <div class="sidebar-sign-logo">
-                        <img src="https://pixcel360.com/wp-content/uploads/2024/01/Backup_of_PIXEL360-LOGO-with-grey.png"
-                            alt="">
-                    </div>
                     <div class="sign_sidebar_text">
                         <h1>The Easiest Way to Create Events and Sell More Tickets Online</h1>
                     </div>
@@ -107,8 +126,9 @@ export default defineComponent({
                                                     <div class="loc-group position-relative">
                                                         <input class="form-control h_50" type="password" placeholder=""
                                                             v-model="form.password">
-                                                        <span class="pass-show-eye"><i
-                                                                class="fas fa-eye-slash"></i></span>
+                                                        <span class="pass-show-eye" @click="togglePasswordVisibility">
+                                                            <i :class="togglePasswordIconClass"></i>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,14 +141,16 @@ export default defineComponent({
                                                     <div class="loc-group position-relative">
                                                         <input class="form-control h_50" type="password" placeholder=""
                                                             v-model="form.password_confirmation">
-                                                        <span class="pass-show-eye"><i
-                                                                class="fas fa-eye-slash"></i></span>
+                                                        <span class="pass-show-eye"
+                                                            @click="toggleConfirmPasswordVisibility">
+                                                            <i :class="toggleConfirmPasswordIconClass"></i>
+                                                        </span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12">
-                                                <button class="main-btn btn-hover w-100 mt-4" type="submit">Sign
-                                                    Up</button>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <button class="main-btn btn-hover w-100 mt-4" type="submit">Sign
+                                                        Up</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
