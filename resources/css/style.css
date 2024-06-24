@@ -1974,11 +1974,11 @@ body {
 }
 
 .agree-text a {
-    color: #6ac045;
+    /* color: #6ac045; */
 }
 
 .agree-text a:hover {
-    color: #7ad254 !important;
+    /* color: #7ad254 !important; */
     text-decoration: underline !important;
 }
 
