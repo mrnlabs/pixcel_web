@@ -939,7 +939,7 @@ body {
 .co-main-btn {
     color: #000;
     background: #fff !important;
-    border-radius: 10px;
+    border-radius: 7px;
     Border: 1px solid #0f6ad8;
 }
 
@@ -1913,7 +1913,7 @@ body {
     min-width: 130px;
     min-height: 40px;
     line-height: 39px;
-    padding: 0 !important;
+    /* padding: 0 !important; */
 }
 
 .sign-logo {
@@ -2060,6 +2060,7 @@ body {
     margin-left: 27px;
 }
 
+/* ///////hover for password icon//////////*/
 .fas:hover {
     color: #1f62b4;
 }
@@ -2068,6 +2069,8 @@ body {
     color: #1f62b4;
 
 }
+
+/* ////////////////////////////////////// */
 
 .event-type-name {
     font-size: 16px;

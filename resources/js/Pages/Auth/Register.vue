@@ -64,6 +64,10 @@ export default defineComponent({
                     <!-- <div class="sidebar-sign-logo">
                             <ApplicationLogo  />
                         </div> -->
+                    <div class="sidebar-sign-logo">
+                        <img src="https://pixcel360.com/wp-content/uploads/2024/01/Backup_of_PIXEL360-LOGO-with-grey.png"
+                            alt="">
+                    </div>
                     <div class="sign_sidebar_text">
                         <h1>The Easiest Way to Create Events and Sell More Tickets Online</h1>
                     </div>
