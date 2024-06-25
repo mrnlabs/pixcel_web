@@ -35,6 +35,10 @@ use App\Services\QRCodeService;
 
 Route::middleware('auth')->group(function () {
 
+    Route::get('/dashboard', function (){
+        return Inertia::render('Dashboard');
+    });
+
     Route::get('/', function (){
         return Inertia::render('Events/Events');
     });

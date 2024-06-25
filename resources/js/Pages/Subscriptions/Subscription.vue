@@ -2,15 +2,13 @@
 
 import { Head, Link } from "@inertiajs/vue3";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import SideNavbar from "@/Components/SideNavbar.vue";
 </script>
 
 <template>
 
     <Head title="All Subscriptions" />
     <AuthenticatedLayout>
-        <!-- Left Sidebar Start -->
-        <SideNavbar class="side" /> <!-- Left Sidebar End -->
+      
         <!-- Body Start -->
         <div class="wrapper wrapper-body">
             <div class="dashboard-body">
