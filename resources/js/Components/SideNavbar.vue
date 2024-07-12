@@ -44,12 +44,12 @@ console.log(props)
 						</Link>
 					</li>
 					<li class="menu--item">
-						<a href="my_organisation_dashboard_reports.html" 
-						:class="{ active:  $page.props.currentRoute == 'invoices'}"
+						<Link href="/invoice" 
+						:class="{ active:  $page.props.currentRoute == 'invoice'}"
 						class="menu--link" title="Reports" data-bs-toggle="tooltip" data-bs-placement="right">
 							<i class="fa-solid fa-chart-pie menu--icon"></i>
 							<span class="menu--label">Invoices</span>
-						</a>
+						</Link>
 					</li>
 					<li class="menu--item">
 						<Link href="/subscriptions" 

@@ -115,8 +115,8 @@ const placeOrder = () => {
                                 </div>
                                 <div class="event-order-dt-content">
                                     <h5>Tutorial on Canvas Painting for Beginners</h5>
-                                    <span>Wed, Jun 01, 2022 5:30 AM</span>
-                                    <div class="category-type">Online Event</div>
+                                    <!-- <span>Wed, Jun 01, 2022 5:30 AM</span> -->
+                                    <!-- <div class="category-type">Online Event</div> -->
                                 </div>
                             </div>
                             <div class="order-total-block">
@@ -136,7 +136,7 @@ const placeOrder = () => {
                             </div>
                             <div class="confirmation-btn">
                                 <button @click="placeOrder" class="main-btn btn-hover h_50 w-100 mt-5" type="button">Confirm & Pay</button>
-                                <span>Price is inclusive of all applicable GST</span>
+                                <!-- <span>Price is inclusive of all applicable GST</span> -->
                             </div>
                         </div>
                     </div>

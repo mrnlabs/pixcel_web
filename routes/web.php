@@ -39,9 +39,9 @@ Route::middleware('auth')->group(function () {
         return Inertia::render('Dashboard');
     });
 
-    Route::get('/', function (){
-        return Inertia::render('Events/Events');
-    });
+    // Route::get('/', function (){
+    //     return Inertia::render('Events/Events');
+    // });
 
 
     Route::get('/events', [EventController::class, 'index'])->name('events');
@@ -67,6 +67,14 @@ Route::middleware('auth')->group(function () {
     //plans
     Route::get('/plans', [PlanController::class, 'index'])->name('plans');
     Route::post('/create-plan', [PlanController::class, 'store'])->name('create_plan');
+
+    Route::get('/invoice', function () {
+        return Inertia::render('Invoices/Invoice');
+});
+Route::get('/test', function () {
+        return Inertia::render('Events/CreateEvent_old');
+});
+
 });
 
 

@@ -20,9 +20,9 @@ const toggleLoading = () => {
 									<div class="booking-confirmed-img mt-4">
 										<img src="images/confirmed.png" alt="">
 									</div>
-									<h4>Booking Confirmed</h4>
+									<h4>Pay With Payfast</h4>
 									<p class="ps-lg-4 pe-lg-4">We are pleased to inform you that your reservation request has been received and confirmed.</p>
-									<div class="add-calender-booking">
+									<div class="d-none add-calender-booking">
 										<h5>Add</h5>
 										<a href="#" class="cb-icon"><i class="fa-brands fa-windows"></i></a>
 										<a href="#" class="cb-icon"><i class="fa-brands fa-apple"></i></a>
@@ -37,15 +37,15 @@ const toggleLoading = () => {
 												<img src="images/event-imgs/img-7.jpg" alt="">
 											</div>
 											<div class="event-order-dt-content">
-												<h5>Tutorial on Canvas Painting for Beginners</h5>
-												<span>Wed, Jun 01, 2022 5:30 AM. Duration 1h</span>
+												<h5>Event Name</h5>
+												<!-- <span>Wed, Jun 01, 2022 5:30 AM. Duration 1h</span>
 												<div class="buyer-name">John Doe</div>
 												<div class="booking-total-tickets">
 													<i class="fa-solid fa-ticket rotate-icon"></i>
 													<span class="booking-count-tickets mx-2">1</span>x Ticket
-												</div>
+												</div> -->
 												<div class="booking-total-grand">
-													Total : <span>$75.00</span>
+													Total : <span>R75.00</span>
 												</div>
 											</div>
 										</div>

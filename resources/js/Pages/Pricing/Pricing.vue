@@ -46,7 +46,7 @@ const addToCart = (plan) => {
 						<div class="pricing-price">
 							
 						</div>
-						<Link @click="addToCart(plan)"  class="price_btn cursor-pointer">Add To Cart</Link>
+						<Link @click="addToCart(plan)" href="#!"  class="price_btn cursor-pointer">Add To Cart</Link>
 					</div>
 				</div>
 			</div>		  
