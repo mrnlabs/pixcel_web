@@ -39,9 +39,9 @@ Route::middleware('auth')->group(function () {
         return Inertia::render('Dashboard');
     });
 
-    // Route::get('/', function (){
-    //     return Inertia::render('Events/Events');
-    // });
+    Route::get('/', function (){
+        return Inertia::render('Events/Events');
+    });
 
 
     Route::get('/events', [EventController::class, 'index'])->name('events');

@@ -38,7 +38,7 @@ class AuthenticatedSessionController extends Controller
             return back()->with('loginSuccess', 'Login Successful');
         }
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return to_route('events');
     }
 
     /**
