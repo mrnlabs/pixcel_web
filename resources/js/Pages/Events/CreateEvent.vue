@@ -113,7 +113,7 @@ function submit() {
             <div class="dashboard-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <Breadcrumb :title="e_vent?.id ? e_vent.name : 'Event'" icon="fa-calendar-days" />
+                        <Breadcrumb :title="e_vent?.id ? e_vent.name : 'Create Event'" icon="fa-calendar-days" />
                         <!-- <hr class="m-5"> -->
                         <div class="mb-3 row mt-4">                            
                              <div class="col-md-3">
@@ -237,7 +237,7 @@ function submit() {
                                       />
                               </div>
                               <div class="col-md-2">
-                                <label for="firstName" class="form-label">Boomerang bounce duration</label>
+                                <label for="firstName" class="form-label"> Bounce duration</label>
                                 <EventInput 
                                       class="col-md-3" 
                                       placeholder="Boomerang bounce duration" 
