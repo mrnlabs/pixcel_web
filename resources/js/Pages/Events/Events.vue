@@ -69,7 +69,7 @@ const duplicateEvent = (event) => {
 					<Breadcrumb title="My Events" icon="fa-chart-pie"/>
 					<div class="col-md-12">
 						<div class="main-card">
-							<div class="dashboard-wrap-content p-4">
+							<div class="dashboard-wrap-content pt-4 pe-4 pb-4">
 
 								<div class="d-md-flex flex-wrap align-items-center">
 									<div class="dashboard-date-wrap">
@@ -112,26 +112,26 @@ const duplicateEvent = (event) => {
 															<td><a href="#" target="_blank">{{ formatDate(event.created_at) }}</a></td>
 															<td>Pending</td>
 															<td>{{ event.expires_at }}</td>
-                                                            <td><i class="fa-solid fa-qrcode cursor-pointer" data-bs-toggle="modal" data-bs-target="#qrModal"></i></td>
+                                                            <td><i class="fa-solid fa-qrcode cursor-pointer fs-1" data-bs-toggle="modal" data-bs-target="#qrModal"></i></td>
                                                             <td>
 																<!-- co-main-btn -->
                                                                 <Link :href="`/event-gallery/${event.id}`" class="pe-4 w-100 ps-4 text-center h_40 d-inline-block">
-                                                                    <i class="fa-solid fa-th"></i>
+                                                                    <i class="fa-solid fa-th fs-1"></i>
                                                                 </Link>
                                                             </td>
-                                                            <td class="w-10"><i class="fa-solid fa-table"></i></td>
-                                                            <td class="w-10"><i class="fa-solid fa-images"></i></td>
+                                                            <td class="w-10"><i class="fa-solid fa-table fs-1"></i></td>
+                                                            <td class="w-10"><i class="fa-solid fa-images fs-1"></i></td>
                                                             <td class="w-10">
 
-<div class="d-flex align-items-center">
+<div class="d-flex align-items-center justify-content-center">
 	<div class="dropdown dropdown-default dropdown-text dropdown-icon-item">
 		<button class="option-btn-1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class="fa-solid fa-ellipsis-vertical"></i>
+			<i class="fa-solid fa-ellipsis-vertical fs-1"></i>
 		</button>
 		<div class="dropdown-menu dropdown-menu-right">
 			<a @click="duplicateEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-regular fa-copy me-3"></i>Duplicate</a>
-			<Link :href="`/create-event?id=${event.id}`" class="dropdown-item"><i class="fa-solid fa-pen me-3"></i>Edit</Link>
-			<a @click="deleteEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-solid fa-trash-can me-3"></i>Delete</a>
+			<Link :href="`/create-event?id=${event.id}`" class="dropdown-item"><i class="fa-solid fa-pen me-3 fs-1"></i>Edit</Link>
+			<a @click="deleteEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-solid fa-trash-can me-3 fs-1"></i>Delete</a>
 		</div>
 	</div>
 </div>
