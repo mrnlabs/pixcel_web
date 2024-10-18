@@ -115,7 +115,7 @@ const duplicateEvent = (event) => {
                                                             <td><i class="fa-solid fa-qrcode cursor-pointer fs-1" data-bs-toggle="modal" data-bs-target="#qrModal"></i></td>
                                                             <td>
 																<!-- co-main-btn -->
-                                                                <Link :href="`/event-gallery/${event.id}`" class="pe-4 w-100 ps-4 text-center h_40 d-inline-block">
+                                                                <Link :href="`/event-gallery/${event.id}`" style="padding-top: 0.2rem;"lass="w-100 text-center h_40 d-inline-block ptc-">
                                                                     <i class="fa-solid fa-th fs-1"></i>
                                                                 </Link>
                                                             </td>
@@ -123,15 +123,15 @@ const duplicateEvent = (event) => {
                                                             <td class="w-10"><i class="fa-solid fa-images fs-1"></i></td>
                                                             <td class="w-10">
 
-<div class="d-flex align-items-center justify-content-center">
-	<div class="dropdown dropdown-default dropdown-text dropdown-icon-item">
+<div class="d-flex align-items-center">
+	<div class="dropdown dropdown-default dropdown-text dropdown-icon-item border-1">
 		<button class="option-btn-1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class="fa-solid fa-ellipsis-vertical fs-1"></i>
+			<i class="fa-solid fa-ellipsis-vertical fs-2 "></i>
 		</button>
 		<div class="dropdown-menu dropdown-menu-right">
 			<a @click="duplicateEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-regular fa-copy me-3"></i>Duplicate</a>
-			<Link :href="`/create-event?id=${event.id}`" class="dropdown-item"><i class="fa-solid fa-pen me-3 fs-1"></i>Edit</Link>
-			<a @click="deleteEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-solid fa-trash-can me-3 fs-1"></i>Delete</a>
+			<Link :href="`/create-event?id=${event.id}`" class="dropdown-item"><i class="fa-solid fa-pen me-3 "></i>Edit</Link>
+			<a @click="deleteEvent(event)" href="javascript:;" class="dropdown-item"><i class="fa-solid fa-trash-can me-3"></i>Delete</a>
 		</div>
 	</div>
 </div>
@@ -185,6 +185,14 @@ const duplicateEvent = (event) => {
 <style scoped>
 .w-10{
 	width: 7% !important;
+}
+.option-btn-1 {
+    width: 35px;
+    height: 35px;
+    color: #000;
+    border: 4px solid #000;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 3px;
 }
 </style>
 
