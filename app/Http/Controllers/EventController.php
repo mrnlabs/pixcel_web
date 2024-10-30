@@ -34,12 +34,9 @@ class EventController extends Controller
     public function index()
     {
         try{
-
-           
-          $qrCode= QrCode::size(150)->generate('https://pixcel360.com/');
     
            $events =  $this->eventService->getEvents();
-            return Inertia::render('Events/Events', ['events' => $events, 'qrCode' => '<div>'.$qrCode.'</div>']);
+            return Inertia::render('Events/Events', ['events' => $events]);
         } catch (\Exception $e){
             //return Inertia::render('Error', ['message' => $e->getMessage()]);
         }
@@ -66,7 +63,7 @@ class EventController extends Controller
             if($new_event){
                 $createVideoSettingsRequest['event_id'] = $new_event->id;
                // $createSharingSettingsRequest['event_id'] = $new_event->id;
-                $this->videoSettingsService->createVideoSettings($createVideoSettingsRequest->validated());
+                // $this->videoSettingsService->createVideoSettings($createVideoSettingsRequest->validated());
                // $this->sharingSettingService->createSharingSettings($createSharingSettingsRequest->validated());
             }
            // redirect to /events route

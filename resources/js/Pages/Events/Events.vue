@@ -10,7 +10,6 @@ const { toastifySuccess, toastifyError } = useToaster();
 
 const props = defineProps({
     events: Array,
-	qrCode: String,
 	success: String,
 	error: String
 })
@@ -54,6 +53,28 @@ const duplicateEvent = (event) => {
 		});
 	}
 }
+
+const showModal = ref(true)
+const editEvent = ref(null)
+
+const showQrCode = (event) => {
+	editEvent.value = null;
+	editEvent.value = event
+}
+const updateEvent = (event) => {
+	router.post(`/edit-event/${event.id}`, {
+		preserveScroll: true,
+		onSuccess: () => {
+			if(props.success){
+			   toastifySuccess(props.success)
+			}else if(props.error){
+			   toastifyError(props.error)
+			}
+		},
+	});
+}
+
+
 </script>
 
 <template>
@@ -92,7 +113,7 @@ const duplicateEvent = (event) => {
 											<div class="table-responsive">
 												<table class="table">
 													<thead class="thead-dark">
-														<tr>{{ qr }}
+														<tr>
 															<th scope="col">NR.</th>
 															<th scope="col">NAME</th>
 															<th scope="col">CREATED</th>
@@ -112,7 +133,9 @@ const duplicateEvent = (event) => {
 															<td><a href="#" target="_blank">{{ formatDate(event.created_at) }}</a></td>
 															<td>Pending</td>
 															<td>{{ event.expires_at }}</td>
-                                                            <td><i class="fa-solid fa-qrcode cursor-pointer fs-1" data-bs-toggle="modal" data-bs-target="#qrModal"></i></td>
+                                                            <td>
+																<i @click="showQrCode(event)" class="fa-solid fa-qrcode cursor-pointer fs-1" data-bs-toggle="modal" data-bs-target="#qrModal"></i>
+															</td>
                                                             <td>
 																<!-- co-main-btn -->
                                                                 <Link :href="`/event-gallery/${event.id}`" style="padding-top: 0.2rem;"lass="w-100 text-center h_40 d-inline-block ptc-">
@@ -154,7 +177,7 @@ const duplicateEvent = (event) => {
 	</div>
 
         <!-- Add Bank Account Model Start-->
-        <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="bankModalLabel" aria-hidden="false">
+        <div v-if="showModal" class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="bankModalLabel" aria-hidden="false">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -165,7 +188,7 @@ const duplicateEvent = (event) => {
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group mt-4 text-center">
-                                        <div v-html="qrCode"></div>
+                                        <div v-html="editEvent?.qrCode"></div>
                                     </div>
                                 </div>
 

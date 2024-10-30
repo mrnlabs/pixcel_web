@@ -1,15 +1,22 @@
 <?php
 
 namespace App\Services;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\Event;
+use Illuminate\Support\HtmlString;
 
 class EventService
 {
-    public function getEvents()
-    {
-        return Event::all();
-    }
+public function getEvents(){
+    $events = Event::get();
+    // $data = $events->map(function ($event) {
+    //     $event->qrCode = QrCode::size(150)->generate("'<div>'.$event->name.'</div>'");
+    //     return $event;
+    // });
+    
+    return $events;
+}
+
 
     public function getEvent($eventId)
     {
@@ -21,6 +28,7 @@ class EventService
 //        add user id
         $data['user_id'] = auth()->user()->id;
         $event = Event::create($data);
+        $event->update(['qrCode' => QrCode::size(150)->generate($event)]);
         return $event;
     }
 
